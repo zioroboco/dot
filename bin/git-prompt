@@ -1,0 +1,11 @@
+#!/bin/bash
+
+branch=$(git branch --show-current 2>/dev/null)
+
+if [[ -n "$branch" ]]; then
+  if [[ -z "$(git status --porcelain)" ]]; then
+    echo "${branch}"
+  else
+    echo "${branch}*"
+  fi
+fi

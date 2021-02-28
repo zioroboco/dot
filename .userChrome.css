@@ -1,0 +1,80 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Make URL-bar look like before by setting the "expanded" URL-bar position/size == the "normal" URL-bar */
+
+/* {{{ */
+
+/* (New) native looking, but with my minimal urlbar
+/* #urlbar {
+  --urlbar-height: 40px !important;
+  margin-left: -5px;
+  padding-left: 5px;
+  --toolbarbutton-border-radius: 0px;
+  --panelui-subview-transition-duration: 0ms;
+  --toolbarbutton-hover-transition-duration: 0ms;
+}
+#tracking-protection-icon-container {
+  margin-left: 5px;
+  padding-left: -5px;
+} */
+
+#urlbar[breakout-extend] {
+  top: calc(
+    (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+  ) !important;
+  left: calc(
+    (var(--urlbar-toolbar-width) - var(--urlbar-width)) / 2
+  ) !important;
+  width: 100% !important;
+}
+
+#urlbar[breakout-extend] #urlbar-input-container {
+  height: var(--urlbar-height) !important;
+  padding: 0px !important;
+}
+
+.urlbarView {
+  margin: 0px !important;
+  width: 100% !important;
+}
+
+.urlbarView-row {
+  padding: 0px !important;
+}
+
+/* }}} */
+
+#TabsToolbar {
+  visibility: collapse !important;
+}
+
+#titlebar-buttonbox {
+  display: none;
+}
+
+#back-button,
+#forward-button {
+  display: none;
+}
+
+#nav-bar {
+  height: 40px;
+}
+
+#urlbar-input-container {
+  /*   border-radius: 0px !important; */
+}
+
+#urlbar {
+  /* margin-left: 80px !important; */
+  /* margin-left: -2px !important;
+  margin-top: 1px !important; */
+
+  /* margin-bottom: 0px !important; */
+}
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]
+  #sidebar-header {
+  display: none;
+}
+

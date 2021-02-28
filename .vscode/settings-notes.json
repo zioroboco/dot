@@ -1,0 +1,179 @@
+{
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 500,
+  "zenMode.hideLineNumbers": true,
+
+  "files.exclude": {
+    ".npmrc": true,
+    "**/node_modules": true,
+    "**/yarn.lock": true,
+    "**/package.json": true,
+    "**/.vscode/": true
+  },
+
+  // "editor.fontFamily": "JetBrains Mono,Fira Code",
+  // "editor.fontFamily": "Fira Code",
+  // "editor.fontSize": 16,
+  "todo-tree.general.statusBar": "tags",
+  "todo-tree.filtering.excludeGlobs": [".vscode", "**/node_modules/*"],
+  "todo-tree.filtering.includeGlobs": ["**/*.md"],
+  "todo-tree.filtering.includeHiddenFiles": false,
+  "todo-tree.tree.scanMode": "workspace",
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j"],
+      "commands": ["cursorDown"]
+    },
+    {
+      "before": ["k"],
+      "commands": ["cursorUp"]
+    }
+    // {
+    //   "before": ["j"],
+    //   "after": ["g", "j"]
+    // },
+    // {
+    //   "before": ["k"],
+    //   "after": ["g", "k"]
+    // },
+  ],
+  "editor.renderLineHighlight": "none",
+  "editor.matchBrackets": "never",
+  "editor.rulers": [80],
+  // "editor.wordWrap": "wordWrapColumn",
+
+  "readTime.wordsPerMinute": 200,
+  "readTime.enabled": true,
+
+  // "insertDateString.format": "## YYYY-MM-DD [hh:mm:ss]:",
+  // "insertDateString.format": "# 'Week' W, DDDD D/M @ H:mm A\n",
+  "insertDateString.format": "[HH:mmA]",
+
+  "[markdown]": {
+    // "editor.defaultFormatter": "fcrespo82.markdown-table-formatter",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.wordWrapColumn": 80,
+    "editor.wordWrap": "wordWrapColumn"
+  },
+
+  "memo.decorations.enabled": true,
+
+  "todo-tree.general.enableFileWatcher": true,
+  "todo-tree.general.fileWatcherGlob": "**/*.md",
+  "todo-tree.tree.autoRefresh": true,
+
+  "todo-tree.general.tags": [
+    "DUE",
+    "REMINDER",
+    "TODO",
+    "- [ ]",
+    "+ [ ]",
+    "* [ ]",
+    "? [ ]",
+    "URGENT",
+    "CRITICAL",
+    "ROCK"
+  ],
+  "todo-tree.general.tagGroups": {
+    "REMINDER": ["REMINDER"],
+    "TODO": ["TODO", "- [ ]"],
+    "DUE": ["DUE"],
+    "CRITICAL": ["URGENT", "CRITICAL", "+ [ ]"],
+    "ROCK": ["ROCK", "* [ ]"],
+    "QUESTION": ["? [ ]"]
+  },
+
+  // i̶c̶o̶n̶s̶̶: https://primer.style/octicons/
+  // icons: https://microsoft.github.io/vscode-codicons/dist/codicon.html
+  "todo-tree.highlights.customHighlight": {
+    "CRITICAL": {
+      "icon": "flame",
+      "foreground": "#E44D26", // red
+      "fontWeight": "600",
+      "gutterIcon": true
+    },
+    "ROCK": {
+      "icon": "star",
+      // "foreground": "#E44D26", // red
+      // "foreground": "#4080D0", // link blue
+      "foreground": "#42A5F5", // readme blue
+      "fontWeight": "600",
+      "gutterIcon": true
+    },
+    "TODO": {
+      "icon": "chevron-right",
+      // "icon": "dot",
+      // "icon": "plus",
+      // "icon": "dot",
+      // "foreground": "#4D9E4D", // green
+      // "foreground": "#33CCFF", // cyan
+      "foreground": "black",
+      "fontWeight": "600",
+      "gutterIcon": true
+    },
+    "REMINDER": {
+      "icon": "clock",
+      "foreground": "#4D9E4D", // green
+      "fontWeight": "600",
+      "gutterIcon": true
+    },
+    "QUESTION": {
+      "icon": "question",
+      "foreground": "grey", // green
+      "fontWeight": "600",
+      "gutterIcon": true
+    },
+    "DUE": {
+      "icon": "clock",
+      // "foreground": "#4D9E4D", // green
+      "foreground": "#E6B524", // yellow
+      "fontWeight": "600",
+      // "foreground": "black",
+      "gutterIcon": true
+    }
+  },
+
+  "editor.renderWhitespace": "none",
+  "memo.backlinksPanel.enabled": true,
+  "editor.lineNumbers": "on",
+  "workbench.statusBar.visible": true,
+  "workbench.colorTheme": "Gray Matter Light",
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": null,
+    "titleBar.inactiveBackground": null,
+    "editorRuler.foreground": null,
+    "peekViewEditor.background": null,
+    "editor.background": null,
+    "panel.background": null,
+    "sideBar.background": null,
+    "statusBarItem.remoteBackground": null,
+    "activityBarBadge.background": null,
+    "list.activeSelectionForeground": null,
+    "list.inactiveSelectionForeground": null,
+    "list.highlightForeground": null,
+    "scrollbarSlider.activeBackground": null,
+    "editorSuggestWidget.highlightForeground": null,
+    "textLink.foreground": null,
+    "progressBar.background": null,
+    "pickerGroup.foreground": null,
+    "tab.activeBorder": null,
+    "notificationLink.foreground": null,
+    "editorWidget.resizeBorder": null,
+    "editorWidget.border": null,
+    "settings.modifiedItemIndicator": null,
+    "settings.headerForeground": null,
+    "panelTitle.activeBorder": null,
+    "breadcrumb.activeSelectionForeground": null,
+    "menu.selectionForeground": null,
+    "menubar.selectionForeground": null,
+    "statusBar.background": null,
+    "statusBar.foreground": null,
+    "statusBar.noFolderBackground": null,
+    "statusBar.debuggingBackground": null
+  },
+
+  "cSpell.enableFiletypes": ["markdown", "!typescript"],
+  "workspace.isHidden": false
+}
