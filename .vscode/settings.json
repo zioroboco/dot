@@ -739,7 +739,7 @@
   "githubPullRequests.fileListLayout": "tree",
   "git.confirmNoVerifyCommit": false,
   "workbench.statusBar.visible": false,
-  "workbench.editor.showTabs": false,
   "terminal.integrated.rendererType": "dom",
-  "workbench.colorTheme": "vs-theme-be5invis-ezekel"
+  "workbench.colorTheme": "vs-theme-be5invis-ezekel",
+  "workbench.editor.showTabs": false
 }

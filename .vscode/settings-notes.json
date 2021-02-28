@@ -8,7 +8,7 @@
     "**/node_modules": true,
     "**/yarn.lock": true,
     "**/package.json": true,
-    "**/.vscode/": true
+    "go.mod": true
   },
 
   // "editor.fontFamily": "JetBrains Mono,Fira Code",

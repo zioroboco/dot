@@ -56,9 +56,17 @@ jobscount() {
   esac
 }
 
-function formatted_git_prompt() {
+## Hide git prompt in tmux
+#function format_git_prompt() {
+#  prompt="$(git-prompt)"
+#  if [[ -n $prompt && -z $TMUX ]]; then
+#    echo "${prompt} "
+#  fi
+#}
+
+function format_git_prompt() {
   prompt="$(git-prompt)"
-  if [[ -n $prompt && -z $TMUX ]]; then
+  if [[ -n $prompt ]]; then
     echo "${prompt} "
   fi
 }
@@ -66,10 +74,10 @@ function formatted_git_prompt() {
 # enable expansions
 setopt PROMPT_SUBST
 
-PROMPT='%F{green}%}❱$(jobscount)%f %~ %F{green}$(formatted_git_prompt)%f'
+PROMPT='%F{green}%}❱$(jobscount)%f %~ %F{cyan}$(format_git_prompt)%f'
 
 if [[ -n $AWS_VAULT ]]; then
-  PROMPT='%F{green}%}❱$(jobscount)%f %F{yellow}%${AWS_VAULT}%f %~ %F{green}$(formatted_git_prompt)%f'
+  PROMPT='%F{green}%}❱$(jobscount)%f %F{yellow}%${AWS_VAULT}%f %~ %F{cyan}$(format_git_prompt)%f'
 fi
 
 eighty() {
@@ -260,7 +268,7 @@ attach() {
 alias a="attach"
 alias tls="tmux ls"
 
-trm() {
+tkill() {
   if [ -z $1 ]; then
     tmux kill-server
   else
