@@ -1,9 +1,5 @@
 # shellcheck shell=bash
 
-# set up nvm
-export NVM_AUTO_USE=true
-export NVM_DIR="${HOME}/.nvm"
-
 # include homebrew manpages
 export MANPATH="/usr/local/man:${MANPATH}"
 
@@ -19,6 +15,11 @@ bindkey -M vicmd v edit-command-line
 
 # set up zgen plugin manager
 source "${HOME}/.zgen/zgen.zsh"
+
+# set up nvm
+export NVM_AUTO_USE=true
+export NVM_DIR="${HOME}/.nvm"
+zgen load lukechilds/zsh-nvm
 
 # needs to load late, but before zsh-history-substring-search
 zgen load zsh-users/zsh-syntax-highlighting
@@ -175,7 +176,6 @@ git-exec() {
   git commit -m "$runme"
 }
 
-export PATH="/Users/louis/zioroboco/git-fuzzy/bin:$PATH"
 export GF_PREFERRED_PAGER="delta --theme=ansi-dark --plus-color=#393F2B --plus-emph-color=#4D5733 --minus-color=#4D1A1A --minus-emph-color=#711515"
 
 # postgresql@10 is keg-only, so needs:
