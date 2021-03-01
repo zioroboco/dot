@@ -302,6 +302,7 @@
     "node_modules"
   ],
   "gitProjectManager.baseProjectsFolders": ["~/cultureamp", "~/zioroboco"],
+  "gitProjectManager.checkRemoteOrigin": false,
   "gitProjectManager.searchInsideProjects": false,
   "gitProjectManager.maxDepthRecursion": 1,
   // "gitProjectManager.storeRepositoriesBetweenSessions": true,
@@ -741,5 +742,6 @@
   "workbench.statusBar.visible": false,
   "terminal.integrated.rendererType": "dom",
   "workbench.colorTheme": "vs-theme-be5invis-ezekel",
-  "workbench.editor.showTabs": false
+  "workbench.editor.showTabs": false,
+  "window.zoomLevel": -1
 }
