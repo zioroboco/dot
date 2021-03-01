@@ -1,4 +1,6 @@
 {
+  "terminal.integrated.rendererType": "experimentalWebgl",
+
   "terminal.integrated.shell.osx": "/Users/louis/.vscode/attach-session.sh",
   "terminal.integrated.shellArgs.osx": ["${workspaceFolder}"],
 
@@ -128,8 +130,8 @@
   "markdown.preview.scrollPreviewWithEditor": true,
 
   "zenMode.fullScreen": false,
-  "zenMode.centerLayout": false,
   "zenMode.hideActivityBar": false,
+  "zenMode.centerLayout": false,
   "zenMode.hideStatusBar": true,
   "zenMode.hideTabs": true,
   "zenMode.restore": true,
@@ -739,8 +741,6 @@
   },
   "githubPullRequests.fileListLayout": "tree",
   "git.confirmNoVerifyCommit": false,
-  "workbench.statusBar.visible": false,
-  "terminal.integrated.rendererType": "dom",
   "workbench.colorTheme": "vs-theme-be5invis-ezekel",
   "workbench.editor.showTabs": false,
   "window.zoomLevel": -1

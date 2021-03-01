@@ -522,12 +522,12 @@
   {
     "key": "up",
     "command": "cursorUp",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible && !inQuickOpen"
   },
   {
     "key": "down",
     "command": "cursorDown",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible && !inQuickOpen"
   },
   // {
   //   "key": "k",
@@ -1564,5 +1564,33 @@
   {
     "key": "ctrl+cmd+w",
     "command": "-workbench.action.toggleTabsVisibility"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+  },
+  {
+    "key": "down",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inputFocus && !editorFocus && !findInputFocussed && !findWidgetVisible"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inputFocus && !editorFocus && !findInputFocussed && !findWidgetVisible"
+  },
+  {
+    "key": "up",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inputFocus && !editorFocus && !findInputFocussed && !findWidgetVisible"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inputFocus && !editorFocus && !findInputFocussed && !findWidgetVisible"
+  },
+  {
+    "key": "ctrl+;",
+    "command": "workbench.action.openPreviousEditorFromHistory"
   }
 ]
