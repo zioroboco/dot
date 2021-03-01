@@ -1,6 +1,6 @@
 {
   "terminal.integrated.shell.osx": "/Users/louis/.vscode/attach-session.sh",
-  "terminal.integrated.shellArgs.osx": ["${workspaceFolderBasename}"],
+  "terminal.integrated.shellArgs.osx": ["${workspaceFolder}"],
 
   "bookmarks.useWorkaroundForFormatters": true,
   "bookmarks.wrapNavigation": false,

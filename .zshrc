@@ -258,23 +258,24 @@ zle -N zle-line-finish empty-buffer-to-clear
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse"
 
 attach() {
-  if [ -z $1 ]; then
-    project="$(pwd)"
-  else
+  if [[ -n $1 ]]; then
     project="$1"
-  fi
-  tmux attach -t "$(basename $project)" || tmux new -s "$(basename $project)"
-}
-alias a="attach"
-alias tls="tmux ls"
-
-tkill() {
-  if [ -z $1 ]; then
-    tmux kill-server
   else
-    tmux kill-session -t "$(basename $1)"
+    project="$(project-root $(pwd))"
   fi
+  if [[ -n $project ]]; then
+    project="$(basename $project)"
+  else
+    project="terminal"
+  fi
+  tmux attach -t "$project" || tmux new -s "$project"
 }
+
+alias a="attach"
+alias ta="tmux attach -t"
+alias ts="tmux new -s"
+alias tls="tmux ls"
+alias tkill="tmux kill-session -t"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
