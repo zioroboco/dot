@@ -1,4 +1,6 @@
 {
+  "markdownTags.autorefresh": true,
+
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 500,
   "zenMode.hideLineNumbers": true,
@@ -175,5 +177,7 @@
   },
 
   "cSpell.enableFiletypes": ["markdown", "!typescript", "!go"],
-  "workspace.isHidden": false
+  "cSpell.allowCompoundWords": true,
+  "cSpell.words": ["unprefixed"],
+  "cSpell.language": "en-GB,en"
 }
