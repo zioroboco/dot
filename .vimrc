@@ -2,6 +2,7 @@ set nocompatible
 filetype plugin indent on
 syntax on
 set autoindent
+set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set backspace=indent,eol,start
