@@ -245,9 +245,10 @@ done
 # }}}
 
 # {{{
+alias " "="clear"
 function empty-buffer-to-clear() {
   if [[ $#BUFFER == 0 ]]; then
-    BUFFER="clear"
+    BUFFER=" "
   fi
 }
 zle -N zle-line-finish empty-buffer-to-clear
