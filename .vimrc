@@ -15,6 +15,16 @@ set splitbelow
 set splitright
 set wrapscan
 
+"" command menu and ! shell completions
+set wildmenu
+set wildmode=longest:full,full
+set wildcharm=<C-Z>
+let edit_re = '\%[e\!]\%[dit] '
+cnoremap <expr> <up> getcmdline() =~# edit_re && wildmenumode() ? "\<left>" : "\<up>"
+cnoremap <expr> <down> getcmdline() =~# edit_re && wildmenumode() ? "\<right>" : "\<down>"
+cnoremap <expr> <left> getcmdline() =~# edit_re && wildmenumode() ? "\<up>" : "\<left>"
+cnoremap <expr> <right> getcmdline() =~# edit_re && wildmenumode() ? " \<bs>\<C-Z>" : "\<right>"
+
 " search
 set incsearch
 set hlsearch
@@ -55,4 +65,7 @@ function! ExecuteMacroOverVisualRange()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
 """ }}}
+
+"" hide useless file types
+let g:netrw_list_hide= '.*\.swp$,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git'
 
