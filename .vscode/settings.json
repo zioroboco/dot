@@ -1,4 +1,5 @@
 {
+  "terminal.integrated.cursorStyle": "underline",
   "terminal.integrated.rendererType": "experimentalWebgl",
 
   "terminal.integrated.shell.osx": "/Users/louis/.vscode/attach-session.sh",
