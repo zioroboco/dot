@@ -20,40 +20,33 @@ font:
   bold_italic:
     family: Menlo
     style: Bold Italic
-  size: 15
-
+  size: 13
 cursor:
   style:
     shape: underline
   vi_mode_style: block
-  thickness: 0.20
-
+  thickness: 0.25
 mouse:
   hide_when_typing: true
-
-
 colors:
   primary:
     background: '#191919'
     foreground: '#e8e8dc'
-
   normal:
-    black:   '#1a191a'
-    red:     '#cd8155'
-    green:   '#bcc48c'
-    yellow:  '#cdb67f'
-    blue:    '#55585b'
+    #black:   '#1a191a'
+    red: '#cd8155'
+    green: '#bcc48c'
+    yellow: '#cdb67f'
+    blue: '#55585b'
     magenta: '#bcc48c'
-    cyan:    '#899496'
-    white:   '#e1e1e0'
-
+    cyan: '#899496'
+    white: '#e1e1e0'
   bright:
-    black:   '#545454'
-    red:     '#e58f5e'
-    green:   '#d5dd9d'
-    yellow:  '#e8cd8f'
-    blue:    '#6d7175'
+    #black:   '#545454'
+    red: '#e58f5e'
+    green: '#d5dd9d'
+    yellow: '#e8cd8f'
+    blue: '#6d7175'
     magenta: '#d5dd9d'
-    cyan:    '#9ba8aa'
-    white:   '#e6e6e6'
-
+    cyan: '#9ba8aa'
+    white: '#e6e6e6'
