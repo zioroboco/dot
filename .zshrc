@@ -332,8 +332,8 @@ function gl() {
 alias "?!"="gl"
 
 function opacity() {
-  opacity="${1:-1.0}" yq eval '.background_opacity = env(opacity)' --inplace ~/.alacritty.yml
-  touch ~/.alacritty.yml
+  opacity="${1:-1.0}" yq eval '.background_opacity = env(opacity)' --inplace ~/.opacity.yml
+  touch ~/.opacity.yml
 }
 
 alias o="opacity 1.0"

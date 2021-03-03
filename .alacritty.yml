@@ -1,12 +1,11 @@
+import:
+  - ~/.opacity.yml
 window:
   title: terminal
   decorations: buttonless
   padding:
     x: 12
     y: 12
-
-background_opacity: 0.5
-
 font:
   normal:
     family: Menlo
