@@ -74,7 +74,7 @@ setopt PROMPT_SUBST
 PROMPT='%F{green}%}❱$(jobscount)%f %~ %F{cyan}$(format_git_prompt)%f'
 
 if [[ -n $AWS_VAULT ]]; then
-  PROMPT='%F{green}%}❱$(jobscount)%f %F{yellow}%${AWS_VAULT}%f %~ %F{cyan}$(format_git_prompt)%f'
+  PROMPT='%F{green}%}❱$(jobscount)%f %F{yellow}$AWS_VAULT%f %~ %F{cyan}$(format_git_prompt)%f'
 fi
 
 eighty() {
