@@ -283,7 +283,6 @@ export PATH=$PATH:$GOPATH/bin
 bindkey -v
 export KEYTIMEOUT=1
 
-
 # Change cursor shape for different vi modes {{{
 
 # Set cursor style (DECSCUSR), VT520.
@@ -295,45 +294,44 @@ export KEYTIMEOUT=1
 # 5  ⇒  blinking bar, xterm.
 # 6  ⇒  steady bar, xterm.
 
-function zle-keymap-select {
+function zle-keymap-select() {
   if [[ ${KEYMAP} == vicmd ]] ||
-     [[ $1 = 'underline' ]]; then
-    echo -ne '\e[4 q'
+    [[ $1 = 'blinking underline' ]]; then
+    echo -ne '\e[3 q'
   elif [[ ${KEYMAP} == main ]] ||
-       [[ ${KEYMAP} == viins ]] ||
-       [[ ${KEYMAP} = '' ]] ||
-       [[ $1 = 'beam' ]]; then
-    echo -ne '\e[6 q'
+    [[ ${KEYMAP} == viins ]] ||
+    [[ ${KEYMAP} = '' ]] ||
+    [[ $1 = 'underline' ]]; then
+    echo -ne '\e[4 q'
   fi
 }
 zle -N zle-keymap-select
 zle-line-init() {
   zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-  echo -ne "\e[6 q"
+  echo -ne "\e[4 q"
 }
 zle -N zle-line-init
-echo -ne '\e[6 q' # Use beam shape cursor on startup.
-preexec() { echo -ne '\e[6 q' ;} # Use beam shape cursor for each new prompt.
+echo -ne '\e[4 q'                # Use beam shape cursor on startup.
+preexec() { echo -ne '\e[4 q'; } # Use beam shape cursor for each new prompt.
 
 # }}}
 
-
-function ddg () {
+function ddg() {
   w3m "https://duckduckgo.com/?q=$*"
 }
 alias "??"="ddg"
 
-function g () {
+function g() {
   w3m "https://www.google.com/search?q=$*"
 }
 alias "?"="g"
 
-function gl () {
+function gl() {
   w3m "https://www.google.com/search?q=$*&btnI"
 }
 alias "?!"="gl"
 
-function opacity () {
+function opacity() {
   opacity="${1:-1.0}" yq eval '.background_opacity = env(opacity)' --inplace ~/.alacritty.yml
   touch ~/.alacritty.yml
 }
@@ -349,4 +347,3 @@ alias o7="opacity 0.7"
 alias o8="opacity 0.8"
 alias o9="opacity 0.9"
 alias o0="opacity 0.0"
-
