@@ -1,0 +1,8 @@
+#!/bin/bash
+
+root=$(git rev-parse --show-toplevel 2>/dev/null)
+
+if [[ -n "$root" ]]; then
+  echo "$root"
+fi
+
