@@ -60,7 +60,7 @@ jobscount() {
 #  fi
 #}
 
-function format_git_prompt() {
+function format-git-prompt() {
   prompt="$(git-prompt)"
   if [[ -n $prompt ]]; then
     echo "${prompt} "
@@ -70,7 +70,30 @@ function format_git_prompt() {
 # enable expansions
 setopt PROMPT_SUBST
 
-PROMPT='%F{green}%}❱$(jobscount)%f %~ %F{cyan}$(format_git_prompt)%f'
+## ORIGINAL
+PROMPT='%F{green}%}❱$(jobscount)%f %~ %F{cyan}$(format-git-prompt)%f'
+
+#function format-pwd-prompt() {
+#	if [[ $(pwd) != $HOME ]]; then
+#		echo '%~ '
+#	fi
+#}
+
+#function format-newline() {
+#	if [[ $(pwd) != $HOME || -n $(git-prompt) ]]; then
+#		print '%{\n%}'
+#	fi
+#}
+
+#PROMPT='$(format-pwd-prompt)%F{cyan}$(git-prompt)%f$(format-newline)%F{green}%}❱$(jobscount)%f '
+
+function precmd() {
+	if [[ -z "$NEWLINE_BEFORE_PROMPT" || $(fc -ln -1) == cd* ]]; then
+    NEWLINE_BEFORE_PROMPT=1
+  elif [[ "$NEWLINE_BEFORE_PROMPT" == 1 ]]; then
+    echo
+  fi
+}
 
 if [[ -n $AWS_VAULT ]]; then
   PROMPT='%F{green}%}❱$(jobscount)%f %F{yellow}$AWS_VAULT%f %~ %F{cyan}$(format_git_prompt)%f'
@@ -244,7 +267,13 @@ done
 # }}}
 
 # {{{
-alias " "="clear"
+alias clear-original="$(which clear)"
+alias clear="clear-without-newline"
+alias " "="clear-without-newline"
+function clear-without-newline() {
+	unset NEWLINE_BEFORE_PROMPT
+	clear-original
+}
 function empty-buffer-to-clear() {
   if [[ $#BUFFER == 0 ]]; then
     BUFFER=" "
