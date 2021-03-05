@@ -18,6 +18,8 @@ export NVM_AUTO_USE=true
 export NVM_DIR="${HOME}/.nvm"
 zgen load lukechilds/zsh-nvm
 
+zgen load zsh-users/zsh-autosuggestions
+
 # map to up/down to search history
 zgen load "zsh-users/zsh-history-substring-search"
 bindkey '^[[A' history-substring-search-up
@@ -25,7 +27,6 @@ bindkey '^[[B' history-substring-search-down
 
 # add visible history autocomplete
 zgen load zsh-users/zsh-syntax-highlighting
-zgen load zsh-users/zsh-autosuggestions
 
 # set up completions
 autoload -U compinit && compinit
