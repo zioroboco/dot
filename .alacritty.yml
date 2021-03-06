@@ -20,6 +20,8 @@ font:
     family: Menlo
     style: Bold Italic
   size: 13
+bell:
+  duration: 0
 cursor:
   style:
     shape: underline
