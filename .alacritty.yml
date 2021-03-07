@@ -21,7 +21,7 @@ font:
     style: Bold Italic
   size: 13
 bell:
-  duration: 0
+  enabled: false
 cursor:
   style:
     shape: underline
