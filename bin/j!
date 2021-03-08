@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# j! (jay-bang)
+#
+# usage:
+#
+# #!/bin/sh
+# #=
+# exec j! $0 $@
+# =#
+#
+# // Julia code...
+
+julia \
+  --color=yes \
+  --compile=min \
+  --optimize=0 \
+  --startup-file=no \
+  "$@"
