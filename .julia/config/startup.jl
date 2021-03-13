@@ -1,13 +1,14 @@
+# note: not working in julia 1.6 (yet)
 # https://github.com/julia-vscode/julia-vscode/wiki/Known-issues-and-workarounds#revisejl
-atreplinit() do repl
-    @async try
-        sleep(0.1)
-        @eval using Revise
-        @async Revise.wait_steal_repl_backend()
-    catch
-        @warn("Could not load Revise.")
-    end
-end
+# atreplinit() do repl
+#     @async try
+#         sleep(0.1)
+#         @eval using Revise
+#         @async Revise.wait_steal_repl_backend()
+#     catch
+#         @warn("Could not load Revise.")
+#     end
+# end
 
 function subtypetree(roottype, level = 1, indent = 4)
   level == 1 && println(roottype)
