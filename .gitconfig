@@ -1,0 +1,45 @@
+[user]
+email = _@ziorobo.co
+name = Louis Quinnell
+signingKey = E0B3713BF046031FA2A278C59421557E7972FABB
+
+[gpg]
+program = /usr/local/bin/gpg
+
+[commit]
+gpgSign = true
+
+[tag]
+forceSignAnnotated = true
+
+[init]
+defaultBranch = master
+
+[pull]
+rebase = true
+ff = only
+
+[core]
+excludesfile = /Users/louis/.gitignore
+editor = nvim
+pager = delta
+
+[interactive]
+diffFilter = delta --color-only
+
+[delta]
+features = line-numbers decorations
+syntax-theme = none
+plus-style = green normal dim
+plus-emph-style = green normal bold
+minus-style = red normal dim
+minus-emph-style = red normal bold
+zero-style = normal normal dim
+whitespace-error-style = normal normal
+plus-empty-line-marker-style = normal normal
+minus-empty-line-marker-style = normal normal
+
+[delta "line-numbers"]
+line-numbers-plus-style = green normal dim
+line-numbers-minus-style = red normal dim
+line-numbers-zero-style = normal normal dim
