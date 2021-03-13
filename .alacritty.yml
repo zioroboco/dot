@@ -25,9 +25,6 @@ font:
 bell:
   enabled: false
 cursor:
-  style:
-    shape: underline
-  vi_mode_style: block
   thickness: 0.25
 mouse:
   hide_when_typing: true
