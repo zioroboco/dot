@@ -10,16 +10,16 @@ window:
     y: 12
 font:
   normal:
-    family: Menlo
+    family: JetBrains Mono NL
     style: Regular
   bold:
-    family: Menlo
+    family: JetBrains Mono NL
     style: Bold
   italic:
-    family: Menlo
+    family: JetBrains Mono NL
     style: Italic
   bold_italic:
-    family: Menlo
+    family: JetBrains Mono NL
     style: Bold Italic
   size: 13
 bell:
