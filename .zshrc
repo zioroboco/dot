@@ -1,5 +1,8 @@
 # shellcheck shell=bash
 
+# disable visual bell in alacritty
+printf "\e[?1042l"
+
 # include homebrew manpages
 export MANPATH="/usr/local/man:${MANPATH}"
 
