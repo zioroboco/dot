@@ -225,7 +225,9 @@ killjobs() {
   jobs -p | xargs kill
 }
 
-alias julia="julia --banner=no --startup-file=no"
+#alias julia="julia --banner=no --startup-file=no"
+alias julia="julia --banner=no"
+alias jl="julia --banner=no"
 alias j="julia -e"
 
 alias pluto="j 'using Pluto; Pluto.run(port=8080)'"
@@ -245,13 +247,14 @@ alias weather="curl v2.wttr.in"
 
 export PATH="$HOME/bin:$PATH"
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 alias ins=code-insiders
 alias notes="code -n ~notes"
 alias house="code -n ~house"
-alias today="gdate --iso-8601"
-alias note="vim ~notes/$(today).md"
+alias today="echo ~notes/$(gdate --iso-8601).md"
+alias next="cat $(today) | head"
+alias now="cat $(today) | head -n 1"
 
 if [ $(command -v rlwrap) ]; then
   alias node='NODE_NO_READLINE=1 rlwrap node'
@@ -306,6 +309,9 @@ alias ta="tmux attach -t"
 alias ts="tmux new -s"
 alias tls="tmux ls"
 alias tkill="tmux kill-session -t"
+alias tcd="tmux attach-session -t . -c"
+alias tmv="tmux rename-window -t ."
+
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -378,3 +384,10 @@ alias o7="opacity 0.7"
 alias o8="opacity 0.8"
 alias o9="opacity 0.9"
 alias o0="opacity 0.0"
+
+alias rss=newsboat
+
+alias vin="echo | vipe"
+alias yank="pbcopy"
+alias put="pbpaste"
+
