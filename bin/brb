@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+
+# brb ("bin-rebuild")
+# rebuild all *.go files in this directory
+
+cd "$(dirname "$0")"
+
+find ./*.go | while read -r gosource; do
+  go build "$gosource"
+done
