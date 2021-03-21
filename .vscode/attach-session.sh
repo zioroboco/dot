@@ -8,3 +8,4 @@ if [[ -z $session ]]; then
 fi
 
 tmux attach-session -t $session || tmux new-session -s $session
+

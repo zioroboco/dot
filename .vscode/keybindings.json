@@ -1592,5 +1592,14 @@
   {
     "key": "ctrl+;",
     "command": "workbench.action.openPreviousEditorFromHistory"
+  },
+  {
+    "key": "ctrl+\\ ctrl+v",
+    "command": "workbench.debug.action.focusVariablesView"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "extension.vim_ctrl+d",
+    "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
   }
 ]

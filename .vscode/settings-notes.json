@@ -69,6 +69,7 @@
   "todo-tree.general.fileWatcherGlob": "**/*.md",
   "todo-tree.tree.autoRefresh": true,
 
+  "todo-tree.regex.regex": "((\\*|//|#|<!--|;|/\\*|^)\\s*($TAGS):?\\s|^\\s*- \\[ \\])",
   "todo-tree.general.tags": ["- [ ]", "+ [ ]", "* [ ]", "? [ ]"],
   "todo-tree.general.tagGroups": {
     "TODO": ["- [ ]"],
@@ -130,9 +131,12 @@
   "editor.renderWhitespace": "none",
   "memo.backlinksPanel.enabled": true,
   "editor.lineNumbers": "on",
-  "workbench.statusBar.visible": true,
+  "workbench.statusBar.visible": false,
   "workbench.colorTheme": "Gray Matter Light",
   "workbench.colorCustomizations": {
+    "editorOverviewRuler.border": "#00000000",
+    "sideBarSectionHeader.background": null,
+    "list.focusBackground": null,
     "titleBar.activeBackground": null,
     "titleBar.inactiveBackground": null,
     "editorRuler.foreground": null,
@@ -168,6 +172,7 @@
 
   "cSpell.enableFiletypes": ["markdown", "!typescript", "!go"],
   "cSpell.allowCompoundWords": true,
-  "cSpell.words": ["unprefixed"],
+  "cSpell.words": ["posix", "unprefixed"],
+  "cSpell.ignoreRegExpList": ["@[a-zA-Z0-9-]+", "\\[.*\\]"],
   "cSpell.language": "en-GB,en"
 }
