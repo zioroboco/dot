@@ -17,9 +17,10 @@ bindkey -M vicmd ^e edit-command-line
 source "${HOME}/.zgen/zgen.zsh"
 
 # set up nvm
-export NVM_AUTO_USE=true
+#export NVM_AUTO_USE=true
 export NVM_DIR="${HOME}/.nvm"
 zgen load lukechilds/zsh-nvm
+alias use="nvm use"
 
 zgen load zsh-users/zsh-autosuggestions
 
@@ -55,14 +56,6 @@ jobscount() {
   esac
 }
 
-## Hide git prompt in tmux
-#function format_git_prompt() {
-#  prompt="$(git-prompt)"
-#  if [[ -n $prompt && -z $TMUX ]]; then
-#    echo "${prompt} "
-#  fi
-#}
-
 function format-git-prompt() {
   prompt="$(git-prompt)"
   if [[ -n $prompt ]]; then
@@ -73,40 +66,27 @@ function format-git-prompt() {
 # enable expansions
 setopt PROMPT_SUBST
 
-## ORIGINAL
 PROMPT='%F{green}%}❱$(jobscount)%f %~ %F{cyan}$(format-git-prompt)%f'
 
-#function format-pwd-prompt() {
-#	if [[ $(pwd) != $HOME ]]; then
-#		echo '%~ '
-#	fi
-#}
-
-#function format-newline() {
-#	if [[ $(pwd) != $HOME || -n $(git-prompt) ]]; then
-#		print '%{\n%}'
-#	fi
-#}
-
-#PROMPT='$(format-pwd-prompt)%F{cyan}$(git-prompt)%f$(format-newline)%F{green}%}❱$(jobscount)%f '
+if [[ -n $AWS_VAULT ]]; then
+  PROMPT='%F{green}%}❱$(jobscount)%f %F{yellow}$AWS_VAULT%f %~ %F{cyan}$(format-git-prompt)%f'
+fi
 
 function precmd() {
-	if [[ -z "$NEWLINE_BEFORE_PROMPT" || $(fc -ln -1) == cd* ]]; then
+	## nvm auto-use adds a newline
+  #if [[ -z "$NEWLINE_BEFORE_PROMPT" || $(fc -ln -1) == cd* ]]; then
+  if [[ -z "$NEWLINE_BEFORE_PROMPT" ]]; then
     NEWLINE_BEFORE_PROMPT=1
   elif [[ "$NEWLINE_BEFORE_PROMPT" == 1 ]]; then
     echo
   fi
 }
 
-if [[ -n $AWS_VAULT ]]; then
-  PROMPT='%F{green}%}❱$(jobscount)%f %F{yellow}$AWS_VAULT%f %~ %F{cyan}$(format_git_prompt)%f'
-fi
-
 eighty() {
   echo "--------------------------------------------------------------------------------"
 }
 
-alias explainshell="docker run -d --rm --name explainshell -p 5000:5000 chrismwendt/codeintel-bash-with-explainshell"
+alias explainshell="docker container run --name explainshell --restart always -p 5000:5000 -d spaceinvaderone/explainshell"
 
 hash -d icloud=~/Library/Mobile\ Documents/com~apple~CloudDocs
 hash -d notes="/Users/louis/Dropbox/Apps/Editorial/notes"
@@ -225,6 +205,7 @@ killjobs() {
   jobs -p | xargs kill
 }
 
+PATH=$PATH:/Applications/Julia-1.6.app/Contents/Resources/julia/bin
 #alias julia="julia --banner=no --startup-file=no"
 alias julia="julia --banner=no"
 alias jl="julia --banner=no"
@@ -255,6 +236,8 @@ alias house="code -n ~house"
 alias today="echo ~notes/$(gdate --iso-8601).md"
 alias next="cat $(today) | head"
 alias now="cat $(today) | head -n 1"
+alias push="echo '- [ ] ' | vipe | cat - $(today) | sponge $(today)"
+alias peek="now"
 
 if [ $(command -v rlwrap) ]; then
   alias node='NODE_NO_READLINE=1 rlwrap node'
@@ -277,8 +260,8 @@ alias clear-original="$(which clear)"
 alias clear="clear-without-newline"
 alias " "="clear-without-newline"
 function clear-without-newline() {
-	unset NEWLINE_BEFORE_PROMPT
-	clear-original
+  unset NEWLINE_BEFORE_PROMPT
+  clear-original
 }
 function empty-buffer-to-clear() {
   if [[ $#BUFFER == 0 ]]; then
@@ -311,7 +294,6 @@ alias tls="tmux ls"
 alias tkill="tmux kill-session -t"
 alias tcd="tmux attach-session -t . -c"
 alias tmv="tmux rename-window -t ."
-
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -367,6 +349,10 @@ function gl() {
   w3m "https://www.google.com/search?q=$*&btnI"
 }
 alias "?!"="gl"
+
+function dict() {
+	w3m "https://en.wiktionary.org/wiki/$*-#English"
+}
 
 function opacity() {
   opacity="${1:-1.0}" yq eval '.background_opacity = env(opacity)' --inplace ~/.opacity.yml
