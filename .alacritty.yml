@@ -9,6 +9,7 @@ window:
     x: 12
     y: 12
 font:
+  size: 16
   normal:
     family: JetBrains Mono NL
     style: Regular
@@ -21,7 +22,6 @@ font:
   bold_italic:
     family: JetBrains Mono NL
     style: Bold Italic
-  size: 13
 bell:
   enabled: false
 cursor:
@@ -37,7 +37,8 @@ colors:
     red: '#cd8155'
     green: '#bcc48c'
     yellow: '#cdb67f'
-    blue: '#55585b'
+    #blue: '#55585b' # my original (too dark)
+    blue: '#6d7175'
     magenta: '#bcc48c'
     cyan: '#899496'
     white: '#e1e1e0'
