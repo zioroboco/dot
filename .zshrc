@@ -22,20 +22,12 @@ export NVM_DIR="${HOME}/.nvm"
 zgen load lukechilds/zsh-nvm
 alias use="nvm use"
 
-zgen load zsh-users/zsh-autosuggestions
-
-# map to up/down to search history
-zgen load "zsh-users/zsh-history-substring-search"
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-
-# add visible history autocomplete
-zgen load zsh-users/zsh-syntax-highlighting
-
 # set up completions
 autoload -U compinit && compinit
 autoload -U bashcompinit && bashcompinit
 zgen load zsh-users/zsh-completions
+
+zgen load zsh-users/zsh-autosuggestions
 
 jobscount() {
   local stopped=$(jobs -sp | wc -l)
@@ -139,8 +131,6 @@ fd() {
     -o -type d -print 2>/dev/null | fzf +m) &&
     cd "$dir"
 }
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias aws-whoami="aws sts get-caller-identity"
 
@@ -376,4 +366,14 @@ alias rss=newsboat
 alias vin="echo | vipe"
 alias yank="pbcopy"
 alias put="pbpaste"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# map to up/down to search history
+zgen load "zsh-users/zsh-history-substring-search"
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+# add visible history autocomplete
+zgen load zsh-users/zsh-syntax-highlighting
 
