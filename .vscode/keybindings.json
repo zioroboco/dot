@@ -675,7 +675,7 @@
     "when": "remoteFileDialogVisible"
   },
   {
-    "key": "cmd+r cmd+p",
+    "key": "cmd+k cmd+g",
     "command": "workbench.view.extension.github-pull-requests"
   },
   {
@@ -800,10 +800,6 @@
     "command": "workbench.action.toggleStatusbarVisibility"
   },
   {
-    "key": "cmd+k cmd+g",
-    "command": "goTestExplorer.focus"
-  },
-  {
     "key": "cmd+b cmd+p",
     "command": "editor.debug.action.toggleBreakpoint",
     "when": "editorTextFocus"
@@ -873,7 +869,7 @@
     "command": "bookmarks.refresh"
   },
   {
-    "key": "cmd+i",
+    "key": "shift+cmd+i",
     "command": "editor.debug.action.showDebugHover",
     "when": "editorTextFocus && inDebugMode"
   },
@@ -1085,10 +1081,6 @@
     "command": "workbench.action.focusActiveEditorGroup"
   },
   {
-    "key": "ctrl+\\ ctrl+e",
-    "command": "workbench.explorer.fileView.focus"
-  },
-  {
     "key": "cmd+3",
     "command": "-workbench.action.focusThirdEditorGroup"
   },
@@ -1159,10 +1151,6 @@
   {
     "key": "cmd+9",
     "command": "workbench.action.openEditorAtIndex9"
-  },
-  {
-    "key": "cmd+k cmd+r",
-    "command": "references-view.tree.focus"
   },
   {
     "key": "shift+cmd+v",
@@ -1423,10 +1411,6 @@
     "command": "todo-tree-view.focus"
   },
   {
-    "key": "ctrl+\\ ctrl+r",
-    "command": "prStatus:github.focus"
-  },
-  {
     "key": "ctrl+alt+left",
     "command": "-footsteps.skipBack"
   },
@@ -1601,5 +1585,26 @@
     "key": "ctrl+d",
     "command": "extension.vim_ctrl+d",
     "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+\\ ctrl+cmd+\\",
+    "command": "workbench.action.focusSideBar"
+  },
+  {
+    "key": "cmd+0",
+    "command": "-workbench.action.focusSideBar"
+  },
+  {
+    "key": "cmd+\\",
+    "command": "go.debug.cursor",
+    "when": "!inDebugMode && editorLangId == 'go'"
+  },
+  {
+    "key": "ctrl+\\ ctrl+r",
+    "command": "prStatus:github.focus"
+  },
+  {
+    "key": "ctrl+\\ ctrl+e",
+    "command": "workbench.explorer.fileView.focus"
   }
 ]
