@@ -1,4 +1,7 @@
 {
+  "vim.easymotionKeys": "asdfghjklqwertyuiopzxcvbnm",
+  "vim.foldfix": true,
+
   "julia.enableTelemetry": false,
   "julia.enableCrashReporter": false,
   "julia.lint.call": false,
@@ -38,7 +41,6 @@
   "pasteImage.insertPattern": "![[${imageFileName}]]",
   "pasteImage.defaultName": "Y-MM-DD@HH:mm:ss",
   "comments.openPanel": "neverOpen",
-  // "vim.foldfix": true,
   "customizeUI.stylesheet": {
     ".watermark": "display: none !important;",
     ".editor-group-letterpress": "background-size: 75% 75% !important; background-position-y: calc(50%) !important; background-image: url(file:///Users/louis/.vscode/glider.svg) !important; opacity: 0.25;",
@@ -283,8 +285,8 @@
   "explorer.compactFolders": false,
   "terminal.integrated.fontWeight": "400",
   "terminal.integrated.fontFamily": "menlo",
-  // "terminal.integrated.fontSize": 16,
-  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontSize": 15,
+  // "terminal.integrated.fontSize": 13,
   "[todo]": {
     "editor.wordWrapColumn": 80,
     "editor.wordWrap": "wordWrapColumn"
@@ -767,7 +769,6 @@
   "githubPullRequests.fileListLayout": "tree",
   "git.confirmNoVerifyCommit": false,
   "workbench.colorTheme": "vs-theme-be5invis-ezekel",
-  "workbench.editor.showTabs": false,
   "cSpell.userWords": ["bffs"],
   "notebook.kernelProviderAssociations": [
     {
@@ -775,5 +776,7 @@
       "kernelProvider": "ms-toolsai.jupyter"
     }
   ],
-  "go.toolsManagement.autoUpdate": true
+  "go.toolsManagement.autoUpdate": true,
+  "githubIssues.queries": [],
+  "workbench.editor.showTabs": false
 }

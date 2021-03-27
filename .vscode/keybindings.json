@@ -1554,18 +1554,8 @@
     "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
   },
   {
-    "key": "down",
-    "command": "workbench.action.quickOpenSelectNext",
-    "when": "inputFocus && !editorFocus && !findInputFocussed && !findWidgetVisible"
-  },
-  {
     "key": "ctrl+down",
     "command": "workbench.action.quickOpenSelectNext",
-    "when": "inputFocus && !editorFocus && !findInputFocussed && !findWidgetVisible"
-  },
-  {
-    "key": "up",
-    "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inputFocus && !editorFocus && !findInputFocussed && !findWidgetVisible"
   },
   {

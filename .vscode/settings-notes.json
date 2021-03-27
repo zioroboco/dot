@@ -1,6 +1,4 @@
 {
-  "markdownTags.autorefresh": true,
-
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 500,
   "zenMode.hideLineNumbers": true,
@@ -13,9 +11,6 @@
     "go.mod": true
   },
 
-  // "editor.fontFamily": "JetBrains Mono,Fira Code",
-  // "editor.fontFamily": "Fira Code",
-  // "editor.fontSize": 16,
   "todo-tree.general.statusBar": "tags",
   "todo-tree.filtering.excludeGlobs": [
     ".vscode",
@@ -35,25 +30,15 @@
       "before": ["k"],
       "commands": ["cursorUp"]
     }
-    // {
-    //   "before": ["j"],
-    //   "after": ["g", "j"]
-    // },
-    // {
-    //   "before": ["k"],
-    //   "after": ["g", "k"]
-    // },
   ],
+
   "editor.renderLineHighlight": "none",
   "editor.matchBrackets": "never",
   "editor.rulers": [80],
-  // "editor.wordWrap": "wordWrapColumn",
 
   "readTime.wordsPerMinute": 200,
   "readTime.enabled": true,
 
-  // "insertDateString.format": "## YYYY-MM-DD [hh:mm:ss]:",
-  // "insertDateString.format": "# 'Week' W, DDDD D/M @ H:mm A\n",
   "insertDateString.format": "\n---\n## `HH:mmA`\n",
 
   "[markdown]": {
@@ -70,15 +55,14 @@
   "todo-tree.tree.autoRefresh": true,
 
   "todo-tree.regex.regex": "((\\*|//|#|<!--|;|/\\*|^)\\s*($TAGS):?\\s|^\\s*- \\[ \\])",
-  "todo-tree.general.tags": ["- [ ]", "+ [ ]", "* [ ]", "? [ ]"],
+  "todo-tree.general.tags": ["- [ ]", "+ [ ]", "* [ ]", "- [ ] [?]", "? [ ]"],
   "todo-tree.general.tagGroups": {
     "TODO": ["- [ ]"],
     "CRITICAL": ["+ [ ]"],
     "ROCK": ["* [ ]"],
-    "QUESTION": ["? [ ]"]
+    "QUESTION": ["- [ ] [?]", "? [ ]"]
   },
 
-  // i̶c̶o̶n̶s̶̶: https://primer.style/octicons/
   // icons: https://microsoft.github.io/vscode-codicons/dist/codicon.html
   "todo-tree.highlights.customHighlight": {
     "CRITICAL": {
@@ -131,7 +115,7 @@
   "editor.renderWhitespace": "none",
   "memo.backlinksPanel.enabled": true,
   "editor.lineNumbers": "on",
-  "workbench.statusBar.visible": false,
+  "workbench.statusBar.visible": true,
   "workbench.colorTheme": "Gray Matter Light",
   "workbench.colorCustomizations": {
     "editorOverviewRuler.border": "#00000000",
