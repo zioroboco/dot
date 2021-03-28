@@ -157,6 +157,6 @@
   "cSpell.enableFiletypes": ["markdown", "!typescript", "!go"],
   "cSpell.allowCompoundWords": true,
   "cSpell.words": ["posix", "unprefixed"],
-  "cSpell.ignoreRegExpList": ["@[a-zA-Z0-9-]+", "\\[.*\\]"],
+  "cSpell.ignoreRegExpList": ["@[a-zA-Z0-9-]+", "\\[.*\\]", "`[^`]*`"],
   "cSpell.language": "en-GB,en"
 }
