@@ -65,7 +65,7 @@ if [[ -n $AWS_VAULT ]]; then
 fi
 
 function precmd() {
-	## nvm auto-use adds a newline
+  ## nvm auto-use adds a newline
   #if [[ -z "$NEWLINE_BEFORE_PROMPT" || $(fc -ln -1) == cd* ]]; then
   if [[ -z "$NEWLINE_BEFORE_PROMPT" ]]; then
     NEWLINE_BEFORE_PROMPT=1
@@ -341,7 +341,7 @@ function gl() {
 alias "?!"="gl"
 
 function dict() {
-	w3m "https://en.wiktionary.org/wiki/$*-#English"
+  w3m "https://en.wiktionary.org/wiki/$*-#English"
 }
 
 function opacity() {
@@ -376,4 +376,3 @@ bindkey '^[[B' history-substring-search-down
 
 # add visible history autocomplete
 zgen load zsh-users/zsh-syntax-highlighting
-
