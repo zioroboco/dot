@@ -55,44 +55,31 @@
   "todo-tree.tree.autoRefresh": true,
 
   "todo-tree.regex.regex": "((\\*|//|#|<!--|;|/\\*|^)\\s*($TAGS):?\\s|^\\s*- \\[ \\])",
-  "todo-tree.general.tags": ["- [ ]", "+ [ ]", "* [ ]", "- [ ] [?]", "? [ ]"],
+  "todo-tree.general.tags": ["- [ ]", "+ [ ]", "* [ ]", "- [ ] [?]", "? [ ]", "- [ ] [[?]]", "[[?]]"],
   "todo-tree.general.tagGroups": {
     "TODO": ["- [ ]"],
-    "CRITICAL": ["+ [ ]"],
-    "ROCK": ["* [ ]"],
-    "QUESTION": ["- [ ] [?]", "? [ ]"]
+    "URGENT": ["+ [ ]"],
+    "IMPORTANT": ["* [ ]"],
+    "QUESTION": ["- [ ] [?]", "- [ ] [[?]]", "[[?]]", "? [ ]"]
   },
 
   // icons: https://microsoft.github.io/vscode-codicons/dist/codicon.html
   "todo-tree.highlights.customHighlight": {
-    "CRITICAL": {
+    "URGENT": {
       "icon": "flame",
       "foreground": "#E44D26", // red
       "fontWeight": "600",
       "gutterIcon": true
     },
-    "ROCK": {
+    "IMPORTANT": {
       "icon": "star",
-      // "foreground": "#E44D26", // red
-      // "foreground": "#4080D0", // link blue
       "foreground": "#42A5F5", // readme blue
       "fontWeight": "600",
       "gutterIcon": true
     },
     "TODO": {
       "icon": "chevron-right",
-      // "icon": "dot",
-      // "icon": "plus",
-      // "icon": "dot",
-      // "foreground": "#4D9E4D", // green
-      // "foreground": "#33CCFF", // cyan
       "foreground": "black",
-      "fontWeight": "600",
-      "gutterIcon": true
-    },
-    "REMINDER": {
-      "icon": "clock",
-      "foreground": "#4D9E4D", // green
       "fontWeight": "600",
       "gutterIcon": true
     },
@@ -102,14 +89,6 @@
       "fontWeight": "600",
       "gutterIcon": true
     },
-    "DUE": {
-      "icon": "clock",
-      // "foreground": "#4D9E4D", // green
-      "foreground": "#E6B524", // yellow
-      "fontWeight": "600",
-      // "foreground": "black",
-      "gutterIcon": true
-    }
   },
 
   "editor.renderWhitespace": "none",
