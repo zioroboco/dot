@@ -1432,30 +1432,6 @@
     "when": "textInputFocus"
   },
   {
-    "key": "ctrl+cmd+-",
-    "command": "footsteps.skipBackDifferentFile"
-  },
-  {
-    "key": "ctrl+cmd+=",
-    "command": "footsteps.skipForwardsDifferentFile"
-  },
-  {
-    "key": "ctrl+-",
-    "command": "footsteps.skipBackSameFile"
-  },
-  {
-    "key": "ctrl+=",
-    "command": "footsteps.skipForwardsSameFile"
-  },
-  {
-    "key": "ctrl+cmd+backspace",
-    "command": "footsteps.toggleHighlightingLines"
-  },
-  {
-    "key": "ctrl+backspace",
-    "command": "footsteps.clearChangesWithinFile"
-  },
-  {
     "key": "ctrl+s",
     "command": "-issue.createIssueFromFile",
     "when": "resourceScheme == 'newIssue' && config.files.autoSave != 'off'"
