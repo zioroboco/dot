@@ -1,26 +1,86 @@
 {
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 500,
-  "zenMode.hideLineNumbers": true,
-
-  "files.exclude": {
-    ".npmrc": true,
-    "**/node_modules": true,
-    "**/yarn.lock": true,
-    "**/package.json": true,
-    "go.mod": true
+  // path-autocomplete
+  "path-autocomplete.ignoredFilesPattern": "**/{*.ts,*.tsx,settings.json,*.svelte,.editorconfig,*.jl,*.ipynb}",
+  "path-autocomplete.enableFolderTrailingSlash": false,
+  "path-autocomplete.extensionOnImport": false,
+  "path-autocomplete.triggerOutsideStrings": true,
+  "path-autocomplete.excludedItems": {
+    "**/{.git,.DS_Store}": { "when": "**" }
+  },
+  "path-autocomplete.pathMappings": {
+    // Map to the filesystem root, relative to where I keep repos
+    "/": "${folder}/../../../.."
   },
 
-  "todo-tree.general.statusBar": "tags",
-  "todo-tree.filtering.excludeGlobs": [
-    ".vscode",
-    "**/archive/**",
-    "**/node_modules/*"
-  ],
-  "todo-tree.filtering.includeGlobs": ["**/*.md"],
-  "todo-tree.filtering.includeHiddenFiles": false,
-  "todo-tree.tree.scanMode": "workspace",
+  "pasteImage.path": "${currentFileDir}",
+  "material-icon-theme.showWelcomeMessage": false,
 
+  // markdown
+  "markdown.extension.toc.levels": "2..6",
+  "[markdown]": {
+    "editor.defaultFormatter": "fcrespo82.markdown-table-formatter",
+    "editor.tabSize": 2,
+    "editor.wordWrapColumn": 80,
+    "editor.wordWrap": "wordWrapColumn"
+  },
+
+  // layout / editor
+  "editor.accessibilitySupport": "off",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "editor.fontLigatures": true,
+  "workbench.activityBar.visible": false,
+  "workbench.sideBar.location": "right",
+  "workbench.statusBar.visible": false,
+  "editor.minimap.enabled": false,
+  "editor.codeLens": false,
+  "editor.renderWhitespace": "none",
+  "editor.matchBrackets": "never",
+  "editor.rulers": [80],
+  "workbench.editor.enablePreview": false,
+  "breadcrumbs.enabled": false,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "line",
+  "editor.cursorSmoothCaretAnimation": false,
+
+  // fonts
+  "editor.fontFamily": "JetBrains Mono,Fira Code",
+  "editor.fontSize": 16,
+  "editor.fontWeight": "500",
+
+  // tabs
+  "editor.renderIndentGuides": true,
+  "editor.tabSize": 2,
+
+  // settings
+  "workbench.settings.openDefaultSettings": false,
+  "workbench.settings.editor": "json",
+
+  // zenmode
+  "zenMode.hideLineNumbers": false,
+  "zenMode.fullScreen": false,
+  "zenMode.hideActivityBar": false,
+  "zenMode.centerLayout": false,
+  "zenMode.hideStatusBar": true,
+  "zenMode.hideTabs": true,
+  "zenMode.restore": true,
+  "zenMode.silentNotifications": true,
+
+  // vim
+  "vim.startInInsertMode": false,
+  "vim.showmodename": true,
+  "vim.showcmd": true,
+  "vim.leader": " ",
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "vim.sneak": true,
+  "vim.easymotion": true,
+  "vim.easymotionKeys": "asdfghjklqwertyuiopzxcvbnm",
+  "vim.foldfix": true,
+  "vim.easymotionMarkerFontWeight": "800",
+  "vim.camelCaseMotion.enable": true,
+  "vim.useSystemClipboard": true,
+  "vim.sneakReplacesF": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["j"],
@@ -32,37 +92,52 @@
     }
   ],
 
-  "editor.renderLineHighlight": "none",
-  "editor.matchBrackets": "never",
-  "editor.rulers": [80],
+  // autosave/format
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 500,
 
-  "readTime.wordsPerMinute": 200,
-  "readTime.enabled": true,
-
-  "insertDateString.format": "\n---\n## `HH:mmA`\n",
-
-  "[markdown]": {
-    "editor.defaultFormatter": "fcrespo82.markdown-table-formatter",
-    "editor.tabSize": 2,
-    "editor.wordWrapColumn": 80,
-    "editor.wordWrap": "wordWrapColumn"
+  // explorer
+  "files.exclude": {
+    ".npmrc": true,
+    "**/node_modules": true,
+    "**/yarn.lock": true,
+    "**/package.json": true
   },
 
-  "memo.decorations.enabled": true,
-
+  // todo-tree
+  "todo-tree.tree.showCurrentScanMode": false,
+  "todo-tree.tree.showScanModeButton": false,
+  "todo-tree.tree.labelFormat": "${after}",
+  "todo-tree.general.statusBarClickBehaviour": "reveal",
   "todo-tree.general.enableFileWatcher": true,
   "todo-tree.general.fileWatcherGlob": "**/*.md",
   "todo-tree.tree.autoRefresh": true,
-
   "todo-tree.regex.regex": "((\\*|//|#|<!--|;|/\\*|^)\\s*($TAGS):?\\s|^\\s*- \\[ \\])",
-  "todo-tree.general.tags": ["- [ ]", "+ [ ]", "* [ ]", "- [ ] [?]", "? [ ]", "- [ ] [[?]]", "[[?]]"],
+  "todo-tree.general.statusBar": "tags",
+  "todo-tree.filtering.includeGlobs": ["**/*.md"],
+  "todo-tree.filtering.includeHiddenFiles": false,
+  "todo-tree.tree.scanMode": "workspace",
+  "todo-tree.filtering.excludeGlobs": [
+    ".vscode",
+    "**/archive/**",
+    "**/node_modules/*"
+  ],
+  "todo-tree.general.tags": [
+    "- [ ]",
+    "+ [ ]",
+    "* [ ]",
+    "- [ ] [?]",
+    "? [ ]",
+    "- [ ] [[?]]",
+    "[[?]]"
+  ],
   "todo-tree.general.tagGroups": {
     "TODO": ["- [ ]"],
     "URGENT": ["+ [ ]"],
     "IMPORTANT": ["* [ ]"],
     "QUESTION": ["- [ ] [?]", "- [ ] [[?]]", "[[?]]", "? [ ]"]
   },
-
   // icons: https://microsoft.github.io/vscode-codicons/dist/codicon.html
   "todo-tree.highlights.customHighlight": {
     "URGENT": {
@@ -73,6 +148,7 @@
     },
     "IMPORTANT": {
       "icon": "star",
+      // "foreground": "#4d9e4d", // the original green squiggly
       "foreground": "#42A5F5", // readme blue
       "fontWeight": "600",
       "gutterIcon": true
@@ -85,57 +161,63 @@
     },
     "QUESTION": {
       "icon": "question",
-      "foreground": "grey", // green
+      "foreground": "grey",
       "fontWeight": "600",
       "gutterIcon": true
-    },
+    }
   },
 
-  "editor.renderWhitespace": "none",
+  // readtime
+  "readTime.wordsPerMinute": 200,
+  "readTime.enabled": true,
+
+  // datetime
+  "insertDateString.format": "\n---\n## `HH:mmA`\n",
+  "insertDateString.formatDate": "\n---\n## `YYYY-MM-DD`",
+  "insertDateString.formatTime": "\n---\n## `HH:mmA`\n",
+
+  // vscode-memo
+  "memo.decorations.enabled": true,
   "memo.backlinksPanel.enabled": true,
-  "editor.lineNumbers": "on",
-  "workbench.statusBar.visible": true,
+  "editor.lineNumbers": "off",
   "workbench.colorTheme": "Gray Matter Light",
   "workbench.colorCustomizations": {
-    "editorOverviewRuler.border": "#00000000",
-    "sideBarSectionHeader.background": null,
-    "list.focusBackground": null,
-    "titleBar.activeBackground": null,
-    "titleBar.inactiveBackground": null,
-    "editorRuler.foreground": null,
-    "peekViewEditor.background": null,
-    "editor.background": null,
-    "panel.background": null,
-    "sideBar.background": null,
-    "statusBarItem.remoteBackground": null,
-    "activityBarBadge.background": null,
-    "list.activeSelectionForeground": null,
-    "list.inactiveSelectionForeground": null,
-    "list.highlightForeground": null,
-    "scrollbarSlider.activeBackground": null,
-    "editorSuggestWidget.highlightForeground": null,
-    "textLink.foreground": null,
-    "progressBar.background": null,
-    "pickerGroup.foreground": null,
-    "tab.activeBorder": null,
-    "notificationLink.foreground": null,
-    "editorWidget.resizeBorder": null,
-    "editorWidget.border": null,
-    "settings.modifiedItemIndicator": null,
-    "settings.headerForeground": null,
-    "panelTitle.activeBorder": null,
-    "breadcrumb.activeSelectionForeground": null,
-    "menu.selectionForeground": null,
-    "menubar.selectionForeground": null,
-    "statusBar.background": null,
-    "statusBar.foreground": null,
-    "statusBar.noFolderBackground": null,
-    "statusBar.debuggingBackground": null
+    "editorOverviewRuler.border": "#00000000"
   },
 
+  // title bar
+  "customizeUI.titleBar": "frameless",
+  "window.titleBarStyle": "native",
+  "window.title": "${rootName}",
+
+  // ui mods
+  "customizeUI.stylesheet": {
+    ".watermark": "display: none !important;",
+    ".editor-group-letterpress": "background-size: 75% 75% !important; background-position-y: calc(50%) !important; background-image: url(file:///Users/louis/.vscode/glider.svg) !important; opacity: 0.25;",
+    "#status\\.scm.statusbar-item.left:nth-of-type(3)": "display: none;",
+    ".scrollbar.horizontal": "display: none !important;",
+    ".scroll-decoration": "display: none !important;",
+    ".statusbar-item.right.__CUSTOM_CSS_JS_INDICATOR_CLS": "display: none !important;",
+    ".composite.title": "display: none !important;",
+    ".pane-header > .count": "display: none !important;",
+    ".part.panel.bottom": "height: 100% !important;",
+    ".part.panel.bottom > .content": "height: 100% !important;",
+    ".part.sidebar.right": "height: 100% !important; padding-top: 0.45rem !important;",
+    ".part.sidebar.right > .content": "height: 100% !important;",
+    ".customview-tree.file-icon-themable-tree.show-file-icons": "height: 100% !important;",
+    ".welcome-view-content": "height: 100% !important;",
+    ".terminal-outer-container": "padding-top: 0.45rem !important; padding-bottom: 0.45rem !important;",
+    ".title-actions": "display: none !important;"
+  },
+
+  // spell check
   "cSpell.enableFiletypes": ["markdown", "!typescript", "!go"],
   "cSpell.allowCompoundWords": true,
   "cSpell.words": ["posix", "unprefixed"],
   "cSpell.ignoreRegExpList": ["@[a-zA-Z0-9-]+", "\\[.*\\]", "`[^`]*`"],
-  "cSpell.language": "en-GB,en"
+  "cSpell.language": "en-GB,en",
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
