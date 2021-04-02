@@ -77,3 +77,6 @@ shift + alt - r :  yabai -m window --toggle topmost
 
 #alt - b : yabai -m window --toggle border
 #alt + shift - b : yabai -m space --toggle padding; yabai -m space --toggle gap
+
+alt - n : code-insiders -n /Users/louis/Dropbox/Apps/Editorial/notes
+
