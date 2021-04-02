@@ -1,7 +1,16 @@
 {
+  "search.showLineNumbers": false,
+  "workbench.editor.showTabs": true,
+  "breadcrumbs.enabled": false,
+
+  "pasteImage.path": "${currentFileDir}",
+
+  "editor.codeLens": false,
+
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 500,
   "zenMode.hideLineNumbers": true,
+  // "zenMode.hideTabs": false,
 
   "files.exclude": {
     ".npmrc": true,
@@ -21,17 +30,6 @@
   "todo-tree.filtering.includeHiddenFiles": false,
   "todo-tree.tree.scanMode": "workspace",
 
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["j"],
-      "commands": ["cursorDown"]
-    },
-    {
-      "before": ["k"],
-      "commands": ["cursorUp"]
-    }
-  ],
-
   "editor.renderLineHighlight": "none",
   "editor.matchBrackets": "never",
   "editor.rulers": [80],
@@ -40,6 +38,8 @@
   "readTime.enabled": true,
 
   "insertDateString.format": "\n---\n## `HH:mmA`\n",
+  "insertDateString.formatDate": "\n---\n## `YYYY-MM-DD`",
+  "insertDateString.formatTime": "\n---\n## `HH:mmA`\n",
 
   "[markdown]": {
     "editor.defaultFormatter": "fcrespo82.markdown-table-formatter",
@@ -55,7 +55,15 @@
   "todo-tree.tree.autoRefresh": true,
 
   "todo-tree.regex.regex": "((\\*|//|#|<!--|;|/\\*|^)\\s*($TAGS):?\\s|^\\s*- \\[ \\])",
-  "todo-tree.general.tags": ["- [ ]", "+ [ ]", "* [ ]", "- [ ] [?]", "? [ ]", "- [ ] [[?]]", "[[?]]"],
+  "todo-tree.general.tags": [
+    "- [ ]",
+    "+ [ ]",
+    "* [ ]",
+    "- [ ] [?]",
+    "? [ ]",
+    "- [ ] [[?]]",
+    "[[?]]"
+  ],
   "todo-tree.general.tagGroups": {
     "TODO": ["- [ ]"],
     "URGENT": ["+ [ ]"],
@@ -73,6 +81,7 @@
     },
     "IMPORTANT": {
       "icon": "star",
+      // "foreground": "#4d9e4d", // the original green squiggly
       "foreground": "#42A5F5", // readme blue
       "fontWeight": "600",
       "gutterIcon": true
@@ -85,10 +94,10 @@
     },
     "QUESTION": {
       "icon": "question",
-      "foreground": "grey", // green
+      "foreground": "grey",
       "fontWeight": "600",
       "gutterIcon": true
-    },
+    }
   },
 
   "editor.renderWhitespace": "none",

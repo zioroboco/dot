@@ -1318,11 +1318,6 @@
     "command": "workbench.action.focusCommentsPanel"
   },
   {
-    "key": "cmd+n cmd+i",
-    "command": "insertDateString.insertDateTime",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "shift+cmd+i",
     "command": "-insertDateString.insertDateTime",
     "when": "editorTextFocus"
@@ -1572,5 +1567,58 @@
   {
     "key": "ctrl+\\ ctrl+e",
     "command": "workbench.explorer.fileView.focus"
+  },
+  {
+    "key": "shift+alt+cmd+i",
+    "command": "-insertDateString.insertOwnFormatDateTime",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+n shift+cmd+i",
+    "command": "insertDateString.insertDate"
+  },
+  {
+    "key": "cmd+n cmd+i",
+    "command": "insertDateString.insertTime"
+  },
+  {
+    "key": "shift+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+up",
+    "command": "-editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "-editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "up",
+    "command": "cursorUp",
+    "when": "editorLangId == 'markdown' && editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  },
+  {
+    "key": "down",
+    "command": "cursorDown",
+    "when": "editorLangId == 'markdown' && editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  },
+  {
+    "key": "k",
+    "command": "cursorUp",
+    "when": "editorLangId == 'markdown' && editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  },
+  {
+    "key": "j",
+    "command": "cursorDown",
+    "when": "editorLangId == 'markdown' && editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
   }
 ]
