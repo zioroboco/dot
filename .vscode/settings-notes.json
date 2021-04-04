@@ -9,7 +9,7 @@
 
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 500,
-  "zenMode.hideLineNumbers": true,
+  // "zenMode.hideLineNumbers": true,
   // "zenMode.hideTabs": false,
 
   "files.exclude": {
@@ -102,10 +102,18 @@
 
   "editor.renderWhitespace": "none",
   "memo.backlinksPanel.enabled": true,
-  "editor.lineNumbers": "on",
+  "editor.lineNumbers": "off",
   "workbench.statusBar.visible": true,
   "workbench.colorTheme": "Gray Matter Light",
   "workbench.colorCustomizations": {
+    "tab.activeBackground": "#f5f5f5",
+    "editorGroupHeader.border": "#f5f5f5",
+    "tab.inactiveBackground": "#eaeaea",
+    "tab.border": "#eaeaea",
+    "editorGroupHeader.tabsBackground": "#eaeaea",
+    "editorGroupHeader.tabsBorder": "#eaeaea",
+    "tab.lastPinnedBorder": "#eaeaea",
+
     "editorOverviewRuler.border": "#00000000",
     "sideBarSectionHeader.background": null,
     "list.focusBackground": null,

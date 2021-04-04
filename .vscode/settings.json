@@ -151,11 +151,11 @@
   "markdown.preview.scrollEditorWithPreview": false,
   "markdown.preview.scrollPreviewWithEditor": true,
 
+  "zenMode.hideTabs": true,
   "zenMode.fullScreen": false,
   "zenMode.hideActivityBar": false,
   "zenMode.centerLayout": false,
   "zenMode.hideStatusBar": true,
-  "zenMode.hideTabs": true,
   "zenMode.restore": true,
   "zenMode.hideLineNumbers": false,
   "zenMode.silentNotifications": true,
