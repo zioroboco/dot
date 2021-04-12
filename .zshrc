@@ -221,9 +221,6 @@ export PATH="$HOME/bin:$PATH"
 
 #test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-alias ins=code-insiders
-alias notes="ins -n ~notes"
-alias house="code -n ~house"
 alias today="echo ~notes/$(gdate --iso-8601).md"
 alias next="cat $(today) | head"
 alias now="cat $(today) | head -n 1"
