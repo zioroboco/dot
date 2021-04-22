@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+
+"$HOME/bin/code" -n /Users/louis/Dropbox/Apps/Editorial/notes
