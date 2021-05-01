@@ -76,3 +76,8 @@ inoremap <S-Tab> <C-D>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
+
+call plug#begin('~/.vim/plugged')
+Plug 'preservim/nerdcommenter'
+call plug#end()
+
