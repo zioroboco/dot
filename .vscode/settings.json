@@ -237,52 +237,56 @@
   // }
 
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["leader", "leader"],
+      "commands": [
+        "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+      ]
+    },
     // {
-    //   "before": ["j"],
-    //   "commands": ["cursorDown"]
-    // },
-    // {
-    //   "before": ["k"],
-    //   "commands": ["cursorUp"]
-    // },
-    // {
-    //   "before": ["<leader>", "m"],
-    //   "commands": ["bookmarks.toggle"]
-    // },
-    // {
-    //   "before": ["<leader>", "b"],
-    //   "commands": ["bookmarks.listFromAllFiles"]
-    // },
-    // {
-    //   "before": ["<leader>", "<leader>", "m"],
-    //   "commands": ["bookmarks.toggleLabeled"]
+    //   "before": [":"],
+    //   "commands": ["vim.showQuickpickCmdLine"]
     // },
     {
-      "before": ["<leader>", "i"],
-      "commands": ["editor.action.showHover"]
+      "before": ["leader", "h"],
+      "after": ["leader", "leader", "h"]
     },
     {
-      "before": ["<leader>", "o"],
-      "commands": ["editor.action.revealDefinition"]
+      "before": ["leader", "j"],
+      "after": ["leader", "leader", "j"]
     },
     {
-      "before": ["<leader>", "r"],
-      "commands": ["docsView.documentationView.pin"]
+      "before": ["leader", "k"],
+      "after": ["leader", "leader", "k"]
     },
     {
-      "before": ["<leader>", "<leader>", "r"],
-      "commands": ["docsView.documentationView.unpin"]
+      "before": ["leader", "l"],
+      "after": ["leader", "leader", "l"]
     },
     {
-      "before": ["<leader>", "\\"],
-      "commands": ["workbench.action.focusPanel"],
-      "when": "!panelFocus"
+      "before": ["leader", "w"],
+      "after": ["leader", "leader", "w"]
+    },
+    {
+      "before": ["leader", "e"],
+      "after": ["leader", "leader", "e"]
+    },
+    {
+      "before": ["leader", "b"],
+      "after": ["leader", "leader", "b"]
+    },
+    {
+      "before": ["leader", "f"],
+      "after": ["leader", "leader", "f"]
+    },
+    {
+      "before": ["leader", "F"],
+      "after": ["leader", "leader", "F"]
+    },
+    {
+      "before": ["leader", "s"],
+      "after": ["leader", "leader", "s"]
     }
-    // {
-    //   "before": ["v", "a"],
-    //   "commands": ["bracket-pair-colorizer-2.expandBracketSelection"],
-    //   "when": "editorTextFocus"
-    // }
   ],
 
   "vim.sneak": true,
