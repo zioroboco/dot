@@ -1,5 +1,5 @@
 {
-  "search.showLineNumbers": false,
+  "search.showLineNumbers": true,
   "workbench.editor.showTabs": true,
   "breadcrumbs.enabled": false,
 
@@ -13,6 +13,9 @@
   // "zenMode.hideTabs": false,
 
   "files.exclude": {
+    ".vscode": true,
+    "Manifest.toml": true,
+    "Project.toml": true,
     ".npmrc": true,
     "**/node_modules": true,
     "**/yarn.lock": true,
@@ -90,10 +93,10 @@
 
   "editor.renderWhitespace": "none",
   "memo.backlinksPanel.enabled": true,
-  "editor.lineNumbers": "off",
   "workbench.statusBar.visible": true,
   "workbench.colorTheme": "Gray Matter Light",
   "workbench.colorCustomizations": {
+    "workspaceInStatusBar.text": "#393939",
     "tab.activeBackground": "#f5f5f5",
     "editorGroupHeader.border": "#f5f5f5",
     "tab.inactiveBackground": "#eaeaea",
@@ -128,7 +131,8 @@
     "editorWidget.border": null,
     "settings.modifiedItemIndicator": null,
     "settings.headerForeground": null,
-    "panelTitle.activeBorder": null,
+    // "panelTitle.activeBorder": null,
+    "panelTitle.activeBorder": "#00000000", // hide underline on panel title
     "breadcrumb.activeSelectionForeground": null,
     "menu.selectionForeground": null,
     "menubar.selectionForeground": null,

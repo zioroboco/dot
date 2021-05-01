@@ -1,4 +1,9 @@
 {
+  "editor.renderLineHighlight": "none",
+  "errorLens.enabledDiagnosticLevels": ["error"],
+
+  "gitlens.hovers.pullRequests.enabled": false, // broken with SSO
+
   "vim.easymotionKeys": "asdfghjklqwertyuiopzxcvbnm",
   "vim.foldfix": true,
 
@@ -42,22 +47,25 @@
   "pasteImage.defaultName": "Y-MM-DD@HH:mm:ss",
   "comments.openPanel": "neverOpen",
   "customizeUI.stylesheet": {
-    ".watermark": "display: none !important;",
-    ".editor-group-letterpress": "background-size: 75% 75% !important; background-position-y: calc(50%) !important; background-image: url(file:///Users/louis/.vscode/glider.svg) !important; opacity: 0.25;",
-    "#status\\.scm.statusbar-item.left:nth-of-type(3)": "display: none;",
-    ".scrollbar.horizontal": "display: none !important;",
-    ".scroll-decoration": "display: none !important;",
-    ".statusbar-item.right.__CUSTOM_CSS_JS_INDICATOR_CLS": "display: none !important;",
-    ".composite.title": "display: none !important;",
-    ".pane-header > .count": "display: none !important;",
-    ".part.panel.bottom": "height: 100% !important;",
-    ".part.panel.bottom > .content": "height: 100% !important;",
-    ".part.sidebar.right": "height: 100% !important; padding-top: 0.45rem !important;",
-    ".part.sidebar.right > .content": "height: 100% !important;",
-    ".customview-tree.file-icon-themable-tree.show-file-icons": "height: 100% !important;",
-    ".welcome-view-content": "height: 100% !important;",
-    ".terminal-outer-container": "padding-top: 0.45rem !important; padding-bottom: 0.45rem !important;",
-    ".title-actions": "display: none !important;"
+    ".watermark": "display: none !important",
+    ".editor-group-letterpress": "background-size: 75% 75% !important; background-position-y: calc(50%) !important; background-image: url(file:///Users/louis/.vscode/glider.svg) !important; opacity: 0.25",
+    "#status\\.scm.statusbar-item.left:nth-of-type(3)": "display: none",
+    ".scrollbar.horizontal": "display: none !important",
+    ".scroll-decoration": "display: none !important",
+    ".statusbar-item.right.__CUSTOM_CSS_JS_INDICATOR_CLS": "display: none !important",
+    ".part.sidebar.right .composite.title": "display: none !important",
+    ".pane-header > .count": "display: none !important",
+    // ".part.panel.bottom": "height: 100% !important",
+    // ".part.panel.bottom > .content": "height: 100% !important",
+    ".part.sidebar.right": "height: 100% !important; padding-top: 0.45rem !important",
+    ".part.sidebar.right > .content": "height: 100% !important",
+    ".customview-tree.file-icon-themable-tree.show-file-icons": "height: 100% !important",
+    ".welcome-view-content": "height: 100% !important",
+    // ".terminal-outer-container": "padding-top: 0.45rem !important; padding-bottom: 0.45rem !important",
+    // ".part.sidebar.right .title-actions": "display: none !important",
+    ".editor-group-container .editor-actions": "display: none !important",
+    ".editor-group-container .title-actions": "display: none !important",
+    ".viewlet .split-view-view.visible": "height: auto !important"
   },
 
   // "gitlens.currentLine.enabled": false,
@@ -155,7 +163,7 @@
   "zenMode.fullScreen": false,
   "zenMode.hideActivityBar": false,
   "zenMode.centerLayout": false,
-  "zenMode.hideStatusBar": true,
+  "zenMode.hideStatusBar": false,
   "zenMode.restore": true,
   "zenMode.hideLineNumbers": false,
   "zenMode.silentNotifications": true,
@@ -283,9 +291,9 @@
   "githubPullRequests.telemetry.enabled": false,
   "githubPullRequests.showInSCM": true,
   "explorer.compactFolders": false,
-  "terminal.integrated.fontWeight": "400",
-  "terminal.integrated.fontFamily": "menlo",
-  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.fontWeight": "500",
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.fontSize": 16,
   // "terminal.integrated.fontSize": 13,
   "[todo]": {
     "editor.wordWrapColumn": 80,
@@ -629,6 +637,7 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.colorCustomizations": {
+    "workspaceInStatusBar.text": "#a9a9a9",
     "editorOverviewRuler.border": "#191919",
     "sideBarSectionHeader.background": "#191919",
     "list.focusOutline": "#007FD4", // default focus outline
@@ -697,7 +706,8 @@
     "editorWidget.border": "#FF7042",
     "settings.modifiedItemIndicator": "#FF7042",
     "settings.headerForeground": "#FF7042",
-    "panelTitle.activeBorder": "#FF7042",
+    // "panelTitle.activeBorder": "#FF7042",
+    "panelTitle.activeBorder": "#00000000", // hide underline on panel title
     "breadcrumb.activeSelectionForeground": "#FF7042",
     "menu.selectionForeground": "#FF7042",
     "menubar.selectionForeground": "#FF7042",
