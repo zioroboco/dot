@@ -79,4 +79,5 @@ shift + alt - r :  yabai -m window --toggle topmost
 #alt + shift - b : yabai -m space --toggle padding; yabai -m space --toggle gap
 
 alt - n : $HOME/bin/notes
+alt - o : $HOME/bin/ouroboros
 
