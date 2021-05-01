@@ -58,17 +58,12 @@
   "todo-tree.general.tags": [
     "- [ ]",
     "+ [ ]",
-    "* [ ]",
-    "- [ ] [?]",
-    "? [ ]",
-    "- [ ] [[?]]",
-    "[[?]]"
+    "* [ ]"
   ],
   "todo-tree.general.tagGroups": {
     "TODO": ["- [ ]"],
     "URGENT": ["+ [ ]"],
-    "IMPORTANT": ["* [ ]"],
-    "QUESTION": ["- [ ] [?]", "- [ ] [[?]]", "[[?]]", "? [ ]"]
+    "QUESTION": ["* [ ]"]
   },
 
   // icons: https://microsoft.github.io/vscode-codicons/dist/codicon.html
@@ -76,13 +71,6 @@
     "URGENT": {
       "icon": "flame",
       "foreground": "#E44D26", // red
-      "fontWeight": "600",
-      "gutterIcon": true
-    },
-    "IMPORTANT": {
-      "icon": "star",
-      // "foreground": "#4d9e4d", // the original green squiggly
-      "foreground": "#42A5F5", // readme blue
       "fontWeight": "600",
       "gutterIcon": true
     },
@@ -94,7 +82,7 @@
     },
     "QUESTION": {
       "icon": "question",
-      "foreground": "grey",
+      "foreground": "black",
       "fontWeight": "600",
       "gutterIcon": true
     }
