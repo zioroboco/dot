@@ -83,7 +83,7 @@ alias explainshell="docker container run --name explainshell --restart always -p
 
 hash -d icloud=~/Library/Mobile\ Documents/com~apple~CloudDocs
 hash -d notes="/Users/louis/Dropbox/Apps/Editorial/notes"
-hash -d ouroboros="/Users/louis/Dropbox/Apps/Editorial/ouroboros"
+hash -d nautilus="/Users/louis/Dropbox/Apps/Editorial/nautilus"
 hash -d lab="/Users/louis/Dropbox/Apps/Editorial/lab"
 hash -d ops="/Users/louis/cultureamp/frontend-ops"
 hash -d base-infra="/Users/louis/cultureamp/base-infrastructure-for-services"

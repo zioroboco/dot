@@ -1620,5 +1620,13 @@
     "key": "j",
     "command": "cursorDown",
     "when": "editorLangId == 'markdown' && editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  },
+  {
+    "key": "alt+cmd+\\",
+    "command": "workbench.action.debug.selectandstart"
+  },
+  {
+    "key": "cmd+n shift+cmd+d",
+    "command": "insertDateString.insertOwnFormatDateTime"
   }
 ]

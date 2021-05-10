@@ -33,8 +33,6 @@ Temporary Items
 .env.*
 .env
 
-TODO
-
 yalc.lock
 .yalc/
 local.code-workspace
