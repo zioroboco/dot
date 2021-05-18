@@ -82,7 +82,7 @@
     },
     "QUESTION": {
       "icon": "question",
-      "foreground": "black",
+      "foreground": "#42A5F5", // readme blue
       "fontWeight": "600",
       "gutterIcon": true
     }
