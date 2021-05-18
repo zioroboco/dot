@@ -1,4 +1,8 @@
 {
+  "csv-edit.fontSizeInPx": 14,
+  "csv-edit.optionsBarAppearance": "collapsed",
+  "csv-edit.sidePanelAppearance": "collapsed",
+
   "editor.renderLineHighlight": "none",
   "errorLens.enabledDiagnosticLevels": ["error"],
 
@@ -35,36 +39,30 @@
   "git.promptToSaveFilesBeforeCommit": "always",
   "git.allowNoVerifyCommit": true,
 
-  // "todo-tree.regex.regex": "($TAGS)(.*)",
-  "todo-tree.tree.showCurrentScanMode": false,
-  "todo-tree.tree.showScanModeButton": false,
-  "todo-tree.tree.labelFormat": "${after}",
-  "todo-tree.general.statusBar": "tags",
-  "todo-tree.general.statusBarClickBehaviour": "reveal",
-
   "godot_tools.editor_path": "/Applications/Godot.app/Contents/MacOS/Godot",
   "pasteImage.insertPattern": "![[${imageFileName}]]",
   "pasteImage.defaultName": "Y-MM-DD@HH:mm:ss",
   "comments.openPanel": "neverOpen",
   "customizeUI.stylesheet": {
+    ".action-item:not(.checked)": "display: none !important", // only show the active panel
     ".watermark": "display: none !important",
     ".editor-group-letterpress": "background-size: 75% 75% !important; background-position-y: calc(50%) !important; background-image: url(file:///Users/louis/.vscode/glider.svg) !important; opacity: 0.25",
     "#status\\.scm.statusbar-item.left:nth-of-type(3)": "display: none",
     ".scrollbar.horizontal": "display: none !important",
     ".scroll-decoration": "display: none !important",
     ".statusbar-item.right.__CUSTOM_CSS_JS_INDICATOR_CLS": "display: none !important",
-    ".part.sidebar.right .composite.title": "display: none !important",
+    // ".part.sidebar.right .composite.title": "display: none !important", // right sidebar titles
     ".pane-header > .count": "display: none !important",
     // ".part.panel.bottom": "height: 100% !important",
     // ".part.panel.bottom > .content": "height: 100% !important",
-    ".part.sidebar.right": "height: 100% !important; padding-top: 0.45rem !important",
-    ".part.sidebar.right > .content": "height: 100% !important",
+    // ".part.sidebar.right": "height: 100% !important; padding-top: 0.45rem !important",
+    // ".part.sidebar.right > .content": "height: 100% !important",
     ".customview-tree.file-icon-themable-tree.show-file-icons": "height: 100% !important",
     ".welcome-view-content": "height: 100% !important",
     // ".terminal-outer-container": "padding-top: 0.45rem !important; padding-bottom: 0.45rem !important",
-    // ".part.sidebar.right .title-actions": "display: none !important",
+    ".part.sidebar.right .title-actions": "display: none !important",
     ".editor-group-container .editor-actions": "display: none !important",
-    ".editor-group-container .title-actions": "display: none !important",
+    // ".editor-group-container .title-actions": "display: none !important",
     ".viewlet .split-view-view.visible": "height: auto !important"
   },
 
@@ -297,7 +295,7 @@
   "explorer.compactFolders": false,
   "terminal.integrated.fontWeight": "500",
   "terminal.integrated.fontFamily": "JetBrains Mono",
-  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontSize": 14,
   // "terminal.integrated.fontSize": 13,
   "[todo]": {
     "editor.wordWrapColumn": 80,
@@ -381,33 +379,42 @@
   "typescript.referencesCodeLens.enabled": false,
   // "javascript.validate.enable": false,
   "bashIde.explainshellEndpoint": "http://localhost:5000",
+
   "todo-tree.filtering.excludedWorkspaces": [
-    // "**/big-frontend-repo/packages/**/*",
-    "**/(dist|build|out)/**/*",
+    "**/(dist|build|(*.)?out)/**/*",
     "**/node_modules/**/*"
   ],
-  "todo-tree.general.tags": [
-    "@todo",
-    "BUG",
-    "WARNING",
-    "FIXME",
-    "TODO",
-    "it.todo"
-  ],
+  "todo-tree.general.tags": ["TODO", "TODO:"],
   "todo-tree.general.tagGroups": {
-    "FIXME": ["FIXME", "WARNING", "BUG"],
-    "TODO": ["TODO", "@todo", "it.todo"]
+    "TODO": ["TODO", "TODO:"]
   },
-  "todo-tree.regex.regex": "((\\*|//|#|<!--|;|/\\*|^)\\s*($TAGS):?\\s|^\\s*- \\[ \\])",
   "todo-tree.highlights.defaultHighlight": {
     "foreground": "#F2B042"
   },
   "todo-tree.highlights.customHighlight": {
-    "FIXME": {
-      "icon": "flame",
-      "foreground": "#E44D26"
+    "TODO": {
+      "icon": "info",
+      "fontWeight": "600",
+      "gutterIcon": true
     }
   },
+
+  // Disable markdown todos:
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^)\\s*($TAGS)",
+
+  // Default (including markdown todos):
+  // "todo-tree.regex.regex": "((\\*|//|#|<!--|;|/\\*|^)\\s*($TAGS):?\\s|^\\s*- \\[ \\])",
+
+  "todo-tree.tree.labelFormat": "${after}",
+
+  "todo-tree.tree.showCurrentScanMode": false,
+  "todo-tree.general.enableFileWatcher": true,
+  "todo-tree.tree.autoRefresh": true,
+  "todo-tree.general.statusBar": "top three",
+  "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
+  "todo-tree.filtering.includeHiddenFiles": false,
+  "todo-tree.tree.scanMode": "workspace",
+
   "liveshare.showInStatusBar": "whileCollaborating",
 
   // disabled in favour of "C# FixFormat" extension
@@ -472,6 +479,7 @@
   // "files.autoSaveDelay": 1000,
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.files.associations": {
+    "index.md": "readme",
     "stylelint.config.cjs": "stylelint",
     "postcss.config.cjs": "postcss",
     "test.ts": "test-ts",
@@ -492,6 +500,8 @@
     "*.drawio.svg": "drawio",
     "*.config.js": "settings",
     "eslint.config.js": "eslint",
+    "jest-playwright.config.js": "jest",
+    "jest.e2e.config.js": "jest",
     "jest.config.dom.js": "jest",
     "jest.config.base.js": "jest",
     "jest.config.node.js": "jest",
@@ -519,12 +529,14 @@
     "jest.workspace.js": "jest",
     "jest.project.js": "jest",
     "*.fixture.ts": "test-ts",
+    "*.scenario.ts": "test-ts",
     "CODEOWNERS": "contributing",
     "CONTRIBUTING.md": "readme",
     "CONTRIBUTING": "readme",
     "ADR.md": "document"
   },
   "material-icon-theme.folders.associations": {
+    "cdk.out": "dist",
     ".archive": "archive",
     // "bindings": "pipe",
     "app-elm": "app",
@@ -534,6 +546,8 @@
     ".cargo": "batch",
     "constructs": "stack",
     "fixtures": "constant",
+    "scenarios": "constant",
+    "scenario": "constant",
     "integration": "test",
     "support": "utils",
     "tests": "test",
@@ -601,6 +615,8 @@
     "tslint": "typescript",
     "types": "typescript",
     "entrypoints": "routes",
+    "endpoints": "routes",
+    "handlers": "routes",
     // "jest": "test",
     "stylelint": "sass"
   },
@@ -633,7 +649,7 @@
 
   "juliaFormatter.indent": 2,
 
-  "editor.fontSize": 16,
+  "editor.fontSize": 14,
   "editor.fontWeight": "500",
   "editor.renderIndentGuides": true,
   "explorer.confirmDelete": false,
@@ -782,7 +798,7 @@
   },
   "githubPullRequests.fileListLayout": "tree",
   "git.confirmNoVerifyCommit": false,
-  "workbench.colorTheme": "vs-theme-be5invis-ezekel",
+  "workbench.colorTheme": "zeke",
   "cSpell.userWords": ["bffs"],
   "notebook.kernelProviderAssociations": [
     {
@@ -792,5 +808,9 @@
   ],
   "go.toolsManagement.autoUpdate": true,
   "githubIssues.queries": [],
-  "workbench.editor.showTabs": false
+  "workbench.editor.showTabs": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editor.untitled.hint": "hidden"
 }
