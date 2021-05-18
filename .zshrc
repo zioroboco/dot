@@ -153,8 +153,8 @@ source /Users/louis/Library/Preferences/org.dystroy.broot/launcher/bash/br
 alias krak='open -na "GitKraken" --args -p $(pwd)'
 
 HISTFILE="$HOME/.zsh_history"
-HISTSIZE=100000
-SAVEHIST=10000
+HISTSIZE=10000000
+SAVEHIST=10000000
 setopt BANG_HIST              # Treat the '!' character specially during expansion.
 setopt EXTENDED_HISTORY       # Write the history file in the ":start:elapsed;command" format.
 setopt INC_APPEND_HISTORY     # Write to the history file immediately, not when the shell exits.
@@ -270,7 +270,7 @@ attach() {
   if [[ -n $project ]]; then
     project="$(basename $project)"
   else
-    project="terminal"
+    project="λ"
   fi
   tmux attach -t "$project" || tmux new -s "$project"
 }

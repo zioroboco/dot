@@ -4,7 +4,7 @@ set -e
 session=$(basename "$(project-root "$1")")
 
 if [[ -z $session ]]; then
-  session="terminal"
+  session="λ"
 fi
 
 tmux attach-session -t $session || tmux new-session -s $session
