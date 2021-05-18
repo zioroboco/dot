@@ -1,6 +1,6 @@
 set nocompatible
 filetype plugin indent on
-syntax on
+syntax off
 set autoindent
 set tabstop=2
 set softtabstop=2
@@ -49,12 +49,6 @@ set undofile
 set undodir     =$HOME/.vim/files/undo/
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
-"colorscheme boring
-colorscheme atlas-warm
-
-hi Normal guifg=none ctermfg=none guibg=none ctermbg=none
-hi NonText ctermbg=none
-
 set mouse=a
 
 "" visual-at.vim {{{
@@ -75,9 +69,4 @@ nnoremap <S-Tab> <<_
 inoremap <S-Tab> <C-D>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
-
-
-call plug#begin('~/.vim/plugged')
-Plug 'preservim/nerdcommenter'
-call plug#end()
 
