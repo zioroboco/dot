@@ -93,16 +93,6 @@
     "command": "-workbench.action.focusLeftGroup"
   },
   {
-    "key": "tab",
-    "command": "editor.action.indentLines",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "cmd+]",
-    "command": "-editor.action.indentLines",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
     "key": "shift+cmd+.",
     "command": "-editor.action.inPlaceReplace.down",
     "when": "editorTextFocus && !editorReadonly"
@@ -857,7 +847,7 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+cmd+b",
+    "key": "cmd+b cmd+m",
     "command": "bookmarks.listFromAllFiles"
   },
   {
@@ -1628,5 +1618,15 @@
   {
     "key": "cmd+n shift+cmd+d",
     "command": "insertDateString.insertOwnFormatDateTime"
+  },
+  {
+    "key": "tab",
+    "command": "editor.action.indentLines",
+    "when": "editorTextFocus && !editorReadonly && vim.mode != 'CommandlineInProgress'"
+  },
+  {
+    "key": "cmd+]",
+    "command": "-editor.action.indentLines",
+    "when": "editorTextFocus && !editorReadonly"
   }
 ]
