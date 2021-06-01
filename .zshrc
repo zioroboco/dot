@@ -154,7 +154,7 @@ alias krak='open -na "GitKraken" --args -p $(pwd)'
 
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000000
-SAVEHIST=10000000
+SAVEHIST=1000000
 setopt BANG_HIST              # Treat the '!' character specially during expansion.
 setopt EXTENDED_HISTORY       # Write the history file in the ":start:elapsed;command" format.
 setopt INC_APPEND_HISTORY     # Write to the history file immediately, not when the shell exits.
@@ -374,4 +374,6 @@ bindkey '^[[B' history-substring-search-down
 
 # add visible history autocomplete
 zgen load zsh-users/zsh-syntax-highlighting
+
+zgen load Aloxaf/fzf-tab
 
