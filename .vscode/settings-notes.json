@@ -1,4 +1,9 @@
 {
+  // "julia.persistentSession.enabled": true,
+  // "julia.persistentSession.shell": "/usr/local/bin/zsh",
+  // "julia.persistentSession.shellExecutionArgument": "-c",
+  // "julia.persistentSession.tmuxSessionName": "julia",
+
   "search.showLineNumbers": true,
   "workbench.editor.showTabs": true,
   "breadcrumbs.enabled": false,
@@ -14,8 +19,8 @@
 
   "files.exclude": {
     ".vscode": true,
-    "Manifest.toml": true,
-    "Project.toml": true,
+    // "Manifest.toml": true,
+    // "Project.toml": true,
     ".npmrc": true,
     "**/node_modules": true,
     "**/yarn.lock": true,

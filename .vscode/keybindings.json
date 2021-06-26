@@ -1628,5 +1628,19 @@
     "key": "cmd+]",
     "command": "-editor.action.indentLines",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+/",
+    "command": "language-julia.show-documentation",
+    "when": "editorTextFocus && editorLangId == 'julia'"
+  },
+  {
+    "key": "alt+j alt+d",
+    "command": "-language-julia.show-documentation",
+    "when": "editorTextFocus && editorLangId == 'julia'"
+  },
+  {
+    "key": "ctrl+\\ shift+cmd+/",
+    "command": "julia-documentation.focus"
   }
 ]

@@ -1,4 +1,22 @@
 {
+  "bookmarks.showNoMoreBookmarksWarning": false,
+  "pasteImage.basePath": "${currentFileDir}",
+
+  "rust-analyzer.hoverActions.debug": false,
+  "rust-analyzer.hoverActions.run": false,
+  "rust-analyzer.hoverActions.enable": true,
+
+  // "rust-analyzer.debug.engineSettings": {},
+  // "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
+
+  "todo-tree.tree.tagsOnly": true,
+  "julia.usePlotPane": true,
+  "julia.usePlotNavigator": true,
+  // "editor.quickSuggestionsDelay": 400,
+
+  "julia.completionmode": "qualify",
+
+  "[go]": { "editor.tabSize": 2 },
   "rust-analyzer.diagnostics.disabled": ["macro-error"],
 
   "csv-edit.fontSizeInPx": 14,
@@ -17,9 +35,13 @@
   "julia.enableCrashReporter": false,
   "julia.lint.call": false,
 
+  "julia.executablePath": "/usr/local/bin/julia",
   "julia.execution.resultType": "both",
   "julia.execution.codeInREPL": true,
+  "julia.persistentSession.enabled": true,
   // "julia.format.ops": false,
+
+  "julia.persistentSession.tmuxSessionName": "repl",
 
   "julia.lint.run": true,
   "julia.format.indent": 2,
@@ -81,11 +103,8 @@
   "window.title": "${rootName}",
   // }
 
-  "[rust]": {
-    "editor.tabSize": 2
-  },
   "rust-analyzer.checkOnSave.command": "clippy",
-  "rust-analyzer.inlayHints.enable": false,
+  // "rust-analyzer.inlayHints.enable": false,
   "rust-analyzer.updates.channel": "nightly",
   "rust-analyzer.updates.askBeforeDownload": false,
   "rust-analyzer.lens.debug": true,
@@ -99,8 +118,6 @@
   "editor.highlightActiveIndentGuide": false,
   "gitlens.currentLine.format": "${message} • ${author}, ${agoOrDate}",
   "editor.lineNumbers": "on",
-
-  "editor.quickSuggestionsDelay": 400,
 
   "html.autoClosingTags": false,
 
@@ -189,16 +206,10 @@
     }
   },
 
-  "workbench.editorAssociations": [
-    {
-      "viewType": "hediet.vscode-drawio-text",
-      "filenamePattern": "*.svg"
-    },
-    {
-      "viewType": "jupyter-notebook",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.svg": "hediet.vscode-drawio-text",
+    "*.ipynb": "jupyter-notebook"
+  },
   "hediet.vscode-drawio.customFonts": ["menlo"],
   "hediet.vscode-drawio.customLibraries": [],
 
@@ -223,7 +234,7 @@
   // Universal path completions: {
   // "typescript.suggest.paths": false,
   "javascript.suggest.paths": false,
-  "path-autocomplete.ignoredFilesPattern": "**/{*.ts,*.tsx,settings.json,*.svelte,.editorconfig,*.jl,*.ipynb}",
+  "path-autocomplete.ignoredFilesPattern": "**/{*.ts,*.tsx,settings.json,*.svelte,.editorconfig,*.jl,*.ipynb,*.rs}",
   "path-autocomplete.enableFolderTrailingSlash": false,
   "path-autocomplete.extensionOnImport": false,
   "path-autocomplete.triggerOutsideStrings": true,
@@ -489,6 +500,7 @@
   // "files.autoSaveDelay": 1000,
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.files.associations": {
+    "*.md5": "lock",
     "index.md": "readme",
     "stylelint.config.cjs": "stylelint",
     "postcss.config.cjs": "postcss",
@@ -546,6 +558,7 @@
     "ADR.md": "document"
   },
   "material-icon-theme.folders.associations": {
+    "main": "server",
     "cdk.out": "dist",
     ".archive": "archive",
     // "bindings": "pipe",
@@ -649,7 +662,8 @@
   "editor.fontFamily": "JetBrains Mono,Fira Code",
 
   "[julia]": {
-    "editor.fontFamily": "JetBrains Mono,Fira Code,JuliaMono",
+    "editor.fontFamily": "JetBrains Mono,JuliaMono",
+    // "editor.fontFamily": "JuliaMono",
     "editor.formatOnSave": false,
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
@@ -809,7 +823,7 @@
   "githubPullRequests.fileListLayout": "tree",
   "git.confirmNoVerifyCommit": false,
   "workbench.colorTheme": "zeke",
-  "cSpell.userWords": ["bffs"],
+  "cSpell.userWords": ["bffs", "parameterised"],
   "notebook.kernelProviderAssociations": [
     {
       "viewType": "jupyter-notebook",
@@ -822,5 +836,9 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.editor.untitled.hint": "hidden"
+  "workbench.editor.untitled.hint": "hidden",
+  "editor.insertSpaces": false,
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "redhat.telemetry.enabled": false
 }
