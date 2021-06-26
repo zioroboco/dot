@@ -52,6 +52,7 @@ yabai -m rule --add app="^iTerm2$" layer=above
 yabai -m rule --add app="^Authy Desktop$" manage=off layer=above
 yabai -m rule --add app="^FaceTime" manage=off layer=above
 yabai -m rule --add app="^ColorSlurp" manage=off layer=above
+yabai -m rule --add app="^julia" manage=off layer=above
 
 echo "yabai config loaded..."
 
