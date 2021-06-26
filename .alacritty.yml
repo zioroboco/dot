@@ -6,10 +6,10 @@ window:
   title: terminal
   decorations: buttonless
   padding:
-    x: 12
-    y: 12
+    x: 10
+    y: 10
 font:
-  size: 16
+  size: 14
   normal:
     family: JetBrains Mono NL
     style: Regular
