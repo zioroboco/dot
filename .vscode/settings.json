@@ -286,6 +286,14 @@
     {
       "before": ["leader", "s"],
       "after": ["leader", "leader", "s"]
+    },
+    {
+      "before": ["J"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["g", "k"]
     }
   ],
 
