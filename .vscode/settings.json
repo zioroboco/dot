@@ -1,4 +1,5 @@
 {
+  "bookmarks.useWorkaroundForFormatters": false,
   "bookmarks.showNoMoreBookmarksWarning": false,
   "pasteImage.basePath": "${currentFileDir}",
 
@@ -28,20 +29,21 @@
 
   "gitlens.hovers.pullRequests.enabled": false, // broken with SSO
 
-  "vim.easymotionKeys": "asdfghjklqwertyuiopzxcvbnm",
+  // "vim.easymotionKeys": "asdfghjklqwertyuiopzxcvbnm",
+  "vim.easymotionKeys": "qwertyuiopasdfghjklzxcvbnm",
   "vim.foldfix": true,
 
   "julia.enableTelemetry": false,
   "julia.enableCrashReporter": false,
   "julia.lint.call": false,
 
-  "julia.executablePath": "/usr/local/bin/julia",
+  // "julia.executablePath": "/usr/local/bin/julia",
   "julia.execution.resultType": "both",
   "julia.execution.codeInREPL": true,
   "julia.persistentSession.enabled": true,
   // "julia.format.ops": false,
 
-  "julia.persistentSession.tmuxSessionName": "repl",
+  "julia.persistentSession.tmuxSessionName": "julia-repl",
 
   "julia.lint.run": true,
   "julia.format.indent": 2,
@@ -56,7 +58,6 @@
   "terminal.integrated.shell.osx": "/Users/louis/.vscode/attach-session.sh",
   "terminal.integrated.shellArgs.osx": ["${workspaceFolder}"],
 
-  "bookmarks.useWorkaroundForFormatters": true,
   "bookmarks.wrapNavigation": false,
   "bookmarks.navigateThroughAllFiles": false,
 
@@ -558,6 +559,8 @@
     "ADR.md": "document"
   },
   "material-icon-theme.folders.associations": {
+    "repl": "batch",
+    "interactive": "batch",
     "main": "server",
     "cdk.out": "dist",
     ".archive": "archive",
@@ -668,7 +671,7 @@
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
     // "editor.defaultFormatter": "julialang.language-julia"
-    "editor.defaultFormatter": "julialang.language-julia"
+    "editor.defaultFormatter": "singularitti.vscode-julia-formatter"
   },
 
   "juliaFormatter.indent": 2,
@@ -802,7 +805,7 @@
   "liveshare.focusBehavior": "prompt",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "kite.showWelcomeNotificationOnStartup": false,
-  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W3tcIm5hbWVcIjpcIm1lbmxvXCJ9XSxcImxpYnJhcmllc1wiOlwiZ2VuZXJhbDt3ZWJpY29uc1wiLFwiY3VzdG9tTGlicmFyaWVzXCI6W1wiTC5zY3JhdGNocGFkXCJdLFwicGx1Z2luc1wiOltdLFwicmVjZW50Q29sb3JzXCI6W1wiMDAwMDAwXCJdLFwiZm9ybWF0V2lkdGhcIjowLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjpmYWxzZSxcInNob3dTdGFydFNjcmVlblwiOnRydWUsXCJncmlkQ29sb3JcIjpcIiNkMGQwZDBcIixcImRhcmtHcmlkQ29sb3JcIjpcIiM2ZTZlNmVcIixcImF1dG9zYXZlXCI6dHJ1ZSxcInJlc2l6ZUltYWdlc1wiOm51bGwsXCJvcGVuQ291bnRlclwiOjAsXCJ2ZXJzaW9uXCI6MTgsXCJ1bml0XCI6MSxcImlzUnVsZXJPblwiOmZhbHNlLFwidWlcIjpcIlwifSIsIi5zY3JhdGNocGFkIjoiPG14bGlicmFyeT5be1wieG1sXCI6XCJqVkJMRG9NZ0VEM043Q2trUFVDMWRkVlZUMERLUkVoQURJNVZiMStVYVUwWEpsMlF2SGtmOG1aQVZXRnVrdTd0UFJyMG9LNmdxaFFqRlJUbUNyMEhLWndCVllPVUlqK1F0d1AxdEttaTF3azcraWNnUytDbC9ZaUZLY1JBaTJjaXhiRXp1UG9GcU10a0hlR2oxODlWblhMdnpGa0t1WGg5eXBDL3cwUTRIMWJhS083VFlBeElhY21XeVJteTdPRGF3cUpyTGNmT3pPbWh6TzAzdWkrWUFlLzRHZmRiYnRyUHFkOD1cIixcIndcIjoxMjAuMDAwMDAwMDAwMDAwMDEsXCJoXCI6NjAuMDAwMDAwMDAwMDAwMDF9XTwvbXhsaWJyYXJ5PiJ9",
+  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W3tcIm5hbWVcIjpcIm1lbmxvXCJ9XSxcImxpYnJhcmllc1wiOlwiZ2VuZXJhbDt3ZWJpY29uc1wiLFwiY3VzdG9tTGlicmFyaWVzXCI6W1wiTC5zY3JhdGNocGFkXCJdLFwicGx1Z2luc1wiOltdLFwicmVjZW50Q29sb3JzXCI6W1wiMDAwMDAwXCJdLFwiZm9ybWF0V2lkdGhcIjowLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6MTYwMCxcImhlaWdodFwiOjEyMDB9LFwic2VhcmNoXCI6ZmFsc2UsXCJzaG93U3RhcnRTY3JlZW5cIjp0cnVlLFwiZ3JpZENvbG9yXCI6XCIjZDBkMGQwXCIsXCJkYXJrR3JpZENvbG9yXCI6XCIjNmU2ZTZlXCIsXCJhdXRvc2F2ZVwiOnRydWUsXCJyZXNpemVJbWFnZXNcIjpudWxsLFwib3BlbkNvdW50ZXJcIjowLFwidmVyc2lvblwiOjE4LFwidW5pdFwiOjEsXCJpc1J1bGVyT25cIjpmYWxzZSxcInVpXCI6XCJcIn0iLCIuc2NyYXRjaHBhZCI6IjxteGxpYnJhcnk+W3tcInhtbFwiOlwialZCTERvTWdFRDNON0Nra1BVQzFkZFZWVDBES1JFaEFESTVWYjErVWFVMFhKbDJRdkhrZjhtWkFWV0Z1a3U3dFBScjBvSzZncWhRakZSVG1DcjBIS1p3QlZZT1VJaitRdHdQMXRLbWkxd2s3K2ljZ1MrQ2wvWWlGS2NSQWkyY2l4YkV6dVBvRnFNdGtIZUdqMTg5Vm5YTHZ6RmtLdVhoOXlwQy93MFE0SDFiYUtPN1RZQXhJYWNtV3lSbXk3T0Rhd3FKckxjZk96T21oek8wM3VpK1lBZS80R2ZkYmJ0clBxZDg9XCIsXCJ3XCI6MTIwLjAwMDAwMDAwMDAwMDAxLFwiaFwiOjYwLjAwMDAwMDAwMDAwMDAxfV08L214bGlicmFyeT4ifQ==",
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -815,7 +818,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.editor.revealIfOpen": true,
-  "jupyter.askForKernelRestart": false,
   "jupyter.alwaysTrustNotebooks": true,
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -823,13 +825,7 @@
   "githubPullRequests.fileListLayout": "tree",
   "git.confirmNoVerifyCommit": false,
   "workbench.colorTheme": "zeke",
-  "cSpell.userWords": ["bffs", "parameterised"],
-  "notebook.kernelProviderAssociations": [
-    {
-      "viewType": "jupyter-notebook",
-      "kernelProvider": "ms-toolsai.jupyter"
-    }
-  ],
+  "cSpell.userWords": ["bffs", "parameterised", "sres"],
   "go.toolsManagement.autoUpdate": true,
   "githubIssues.queries": [],
   "workbench.editor.showTabs": false,
@@ -840,5 +836,10 @@
   "editor.insertSpaces": false,
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
   "editor.wordWrap": "off",
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
+  "hediet.vscode-drawio.theme": "dark",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  }
 }

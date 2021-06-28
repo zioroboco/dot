@@ -1,8 +1,16 @@
 {
-  // "julia.persistentSession.enabled": true,
+  // "pasteImage.basePath": "${currentFileDir}/images",
+  "memo.links.rules": [
+    {
+      "rule": "([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))\\.md$",
+      "folder": "daily"
+    }
+  ],
+
+  "julia.persistentSession.enabled": false,
   // "julia.persistentSession.shell": "/usr/local/bin/zsh",
   // "julia.persistentSession.shellExecutionArgument": "-c",
-  // "julia.persistentSession.tmuxSessionName": "julia",
+  // "julia.persistentSession.tmuxSessionName": "notes-repl",
 
   "search.showLineNumbers": true,
   "workbench.editor.showTabs": true,
@@ -18,6 +26,16 @@
   // "zenMode.hideTabs": false,
 
   "files.exclude": {
+    "archive":  true,
+    "people":  false,
+    "daily/2020-*":  true,
+    "daily/2021-01-*":  true,
+    "daily/2021-02-*":  true,
+    "daily/2021-03-*":  true,
+    "daily/2021-04-*":  true,
+    "daily/2021-05-*":  true,
+    "daily/2021-06-0*":  true,
+    "daily/2021-06-1*":  true,
     ".vscode": true,
     // "Manifest.toml": true,
     // "Project.toml": true,
@@ -146,7 +164,11 @@
 
   "cSpell.enableFiletypes": ["markdown", "!typescript", "!go"],
   "cSpell.allowCompoundWords": true,
-  "cSpell.words": ["posix", "unprefixed"],
+  "cSpell.words": [
+    "posix",
+    "roli",
+    "unprefixed"
+  ],
   "cSpell.ignoreRegExpList": ["@[a-zA-Z0-9-]+", "\\[.*\\]", "`[^`]*`"],
   "cSpell.language": "en-GB,en"
 }
