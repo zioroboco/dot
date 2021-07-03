@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 tmux="/usr/local/bin/tmux"
 project_dir=$(project-root "$1")
@@ -7,6 +6,7 @@ session=$(basename "$project_dir")
 
 if [[ $(basename "$(pwd)") = "notes" ]]; then
 	session="notes"
+ 	project_dir="/Users/louis/Dropbox/Apps/Editorial/notes"
 elif [[ -z $session ]]; then
 	session="λ"
 fi
