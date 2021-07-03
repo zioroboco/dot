@@ -430,17 +430,15 @@
   "bashIde.explainshellEndpoint": "http://localhost:5000",
 
   "todo-tree.filtering.excludeGlobs": [
-    "**/package.json", // vscode extensions include keys that look like bookmarks
     "**/node_modules"
   ],
   "todo-tree.filtering.excludedWorkspaces": [
     "**/(dist|build|(*.)?out)/**/*",
     "**/node_modules/**/*"
   ],
-  "todo-tree.general.tags": ["TODO", "\t\t\t\t\"label\"", "        \"label\""],
+  "todo-tree.general.tags": ["TODO"],
   "todo-tree.general.tagGroups": {
-    "TODO": ["TODO"],
-    "BOOKMARK": ["\t\t\t\t\"label\"", "        \"label\""],
+    "TODO": ["TODO"]
   },
   "todo-tree.highlights.defaultHighlight": {
     "foreground": "#F2B042"
@@ -448,12 +446,6 @@
   "todo-tree.highlights.customHighlight": {
     "TODO": {
       "icon": "info",
-      "fontWeight": "600",
-      "gutterIcon": true
-    },
-    "BOOKMARK": {
-      "icon": "bookmark-fill",
-      "foreground": "#157EFB",
       "fontWeight": "600",
       "gutterIcon": true
     }
