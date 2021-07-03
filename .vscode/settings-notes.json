@@ -75,10 +75,6 @@
   "readTime.wordsPerMinute": 200,
   "readTime.enabled": true,
 
-  "insertDateString.format": "[[YYYY-MM-DD]]",
-  "insertDateString.formatDate": "\n---\n## [[YYYY-MM-DD]]",
-  "insertDateString.formatTime": "\n---\n## `HH:mmA`\n",
-
   "[markdown]": {
     "editor.defaultFormatter": "fcrespo82.markdown-table-formatter",
     "editor.tabSize": 2,

@@ -1,5 +1,22 @@
 {
+  "insertDateString.format": "[[YYYY-MM-DD]]",
+  "insertDateString.formatDate": "\n---\n## [[YYYY-MM-DD]]",
+  "insertDateString.formatTime": "\n---\n## `HH:mmA`\n",
+
+  "memo.links.rules": [
+    {
+      "rule": "([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))\\.md$",
+      "folder": "../../Dropbox/Apps/Editorial/notes/daily"
+    },
+    {
+      "rule": "\\.md$",
+      "folder": ".notes"
+    },
+  ],
+
+  "bookmarks.label.suggestion": "suggestWhenSelected",
   "bookmarks.saveBookmarksInProject": true,
+
   "git-graph.graph.colours": [
     "#fb4934",
     "#b8bb26",
@@ -591,6 +608,7 @@
     "ADR.md": "document"
   },
   "material-icon-theme.folders.associations": {
+    ".notes": "docs",
     "repl": "batch",
     "interactive": "batch",
     "main": "server",
