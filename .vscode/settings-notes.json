@@ -1,4 +1,11 @@
 {
+  "todo-tree.tree.showCountsInTree": true,
+
+  // "zenMode.hideTabs": false,
+  "zenMode.hideStatusBar": true,
+  "zenMode.hideLineNumbers": true,
+  "editor.fontSize": 16,
+
   // "pasteImage.basePath": "${currentFileDir}/images",
   "memo.links.rules": [
     {
@@ -36,6 +43,7 @@
     "daily/2021-05-*":  true,
     "daily/2021-06-0*":  true,
     "daily/2021-06-1*":  true,
+    "daily/2021-06-2*":  true,
     ".vscode": true,
     // "Manifest.toml": true,
     // "Project.toml": true,
@@ -45,6 +53,9 @@
     "**/package.json": true,
     "go.mod": true
   },
+
+  "todo-tree.tree.buttons.viewStyle": true,
+  "todo-tree.tree.expanded": true,
 
   "todo-tree.general.statusBar": "top three",
   "todo-tree.filtering.excludeGlobs": [
@@ -165,6 +176,7 @@
   "cSpell.enableFiletypes": ["markdown", "!typescript", "!go"],
   "cSpell.allowCompoundWords": true,
   "cSpell.words": [
+    "okrs",
     "posix",
     "roli",
     "unprefixed"

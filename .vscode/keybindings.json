@@ -319,6 +319,10 @@
     "command": "git-graph.view"
   },
   {
+    "key": "ctrl+cmd+a",
+    "command": "git-graph.view"
+  },
+  {
     "key": "cmd+r cmd+r",
     "command": "editor.action.changeAll",
     "when": "editorTextFocus && !editorReadonly"
@@ -1039,6 +1043,7 @@
   },
   {
     "key": "alt+enter",
+    // "command": "language-julia.executeCodeBlockOrSelection",
     "command": "language-julia.executeJuliaCodeInREPL",
     "when": "editorTextFocus && editorLangId == 'markdown' && !jupyter.hascodecells"
   },
