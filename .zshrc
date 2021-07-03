@@ -196,7 +196,7 @@ killjobs() {
   jobs -p | xargs kill
 }
 
-PATH=$PATH:/Applications/Julia-1.6.app/Contents/Resources/julia/bin
+PATH=$PATH:/Applications/Julia-1.7.app/Contents/Resources/julia/bin
 #alias julia="julia --banner=no --startup-file=no"
 alias julia="julia --banner=no"
 alias jl="julia --banner=no"
