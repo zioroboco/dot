@@ -47,10 +47,11 @@
   "julia.lint.call": false,
 
   // "julia.executablePath": "/usr/local/bin/julia",
-  "julia.executablePath": "/Applications/Julia-1.7.app/Contents/Resources/julia/bin/julia",
+  // "julia.executablePath": "/Applications/Julia-1.7.app/Contents/Resources/julia/bin/julia",
+  "julia.executablePath": "/Applications/Julia-1.6.app/Contents/Resources/julia/bin/julia",
   "julia.execution.resultType": "both",
   "julia.execution.codeInREPL": true,
-  "julia.persistentSession.enabled": true,
+  // "julia.persistentSession.enabled": true,
   // "julia.format.ops": false,
 
   "julia.persistentSession.tmuxSessionName": "julia-repl",

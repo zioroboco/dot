@@ -196,13 +196,16 @@ killjobs() {
   jobs -p | xargs kill
 }
 
-PATH=$PATH:/Applications/Julia-1.7.app/Contents/Resources/julia/bin
+#PATH=$PATH:/Applications/Julia-1.7.app/Contents/Resources/julia/bin
+PATH=$PATH:/Applications/Julia-1.6.app/Contents/Resources/julia/bin
 #alias julia="julia --banner=no --startup-file=no"
 alias julia="julia --banner=no"
 alias jl="julia --banner=no"
 alias j="julia -e"
 
 alias pluto="j 'using Pluto; Pluto.run(port=8080)'"
+
+alias code="code-insiders"
 
 PATH="/Users/louis/perl5/bin${PATH:+:${PATH}}"
 export PATH
