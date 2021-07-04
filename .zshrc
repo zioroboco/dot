@@ -196,8 +196,6 @@ killjobs() {
   jobs -p | xargs kill
 }
 
-#PATH=$PATH:/Applications/Julia-1.7.app/Contents/Resources/julia/bin
-PATH=$PATH:/Applications/Julia-1.6.app/Contents/Resources/julia/bin
 #alias julia="julia --banner=no --startup-file=no"
 alias julia="julia --banner=no"
 alias jl="julia --banner=no"
@@ -219,8 +217,6 @@ PERL_MM_OPT="INSTALL_BASE=/Users/louis/perl5"
 export PERL_MM_OPT
 
 alias weather="curl v2.wttr.in"
-
-export PATH="$HOME/bin:$PATH"
 
 #test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
