@@ -1647,5 +1647,46 @@
   {
     "key": "ctrl+\\ shift+cmd+/",
     "command": "julia-documentation.focus"
+  },
+  {
+    "key": "ctrl+\\ ctrl+=",
+    "command": "bookmarksExplorer.focus"
+  },
+  {
+    "key": "ctrl+\\ ctrl+-",
+    "command": "todo-tree-view.focus"
+  },
+  {
+    "key": "ctrl+e ctrl+s",
+    "command": "search.action.openNewEditor"
+  },
+  {
+    "key": "alt+cmd+[",
+    "command": "editor.action.dirtydiff.previous",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+f3",
+    "command": "-editor.action.dirtydiff.previous",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+]",
+    "command": "editor.action.dirtydiff.next",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+f3",
+    "command": "-editor.action.dirtydiff.next",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+\\",
+    "command": "language-julia.debugEditorContents",
+    "when": "!inDebugMode"
+  },
+  {
+    "key": "ctrl+\\ ctrl+cmd+-",
+    "command": "memo.backlinksPanel.focus"
   }
 ]

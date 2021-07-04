@@ -1,4 +1,13 @@
 {
+  "editor.codeLens": false,
+  // "go.enableCodeLens": {
+  //   "references": false,
+  //   "runtest": true
+  // },
+
+  "vim.easymotionDimBackground": false,
+  "vim.easymotionMarkerBackgroundColor": "#F8F9FA",
+
   "todo-tree.tree.showCountsInTree": true,
 
   // "zenMode.hideTabs": false,
@@ -14,18 +23,15 @@
     }
   ],
 
-  "julia.persistentSession.enabled": false,
   // "julia.persistentSession.shell": "/usr/local/bin/zsh",
   // "julia.persistentSession.shellExecutionArgument": "-c",
   // "julia.persistentSession.tmuxSessionName": "notes-repl",
 
   "search.showLineNumbers": true,
   "workbench.editor.showTabs": true,
-  "breadcrumbs.enabled": false,
+  "breadcrumbs.enabled": true,
 
   "pasteImage.path": "${currentFileDir}",
-
-  "editor.codeLens": false,
 
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 500,
@@ -33,17 +39,22 @@
   // "zenMode.hideTabs": false,
 
   "files.exclude": {
-    "archive":  true,
-    "people":  false,
-    "daily/2020-*":  true,
-    "daily/2021-01-*":  true,
-    "daily/2021-02-*":  true,
-    "daily/2021-03-*":  true,
-    "daily/2021-04-*":  true,
-    "daily/2021-05-*":  true,
-    "daily/2021-06-0*":  true,
-    "daily/2021-06-1*":  true,
-    "daily/2021-06-2*":  true,
+    "Manifest.toml": true,
+    "src/": true, // required by julia's package manager
+    "archive": true,
+    "people": false,
+    "daily/2020-*": true,
+    "daily/2021-01-*": true,
+    "daily/2021-02-*": true,
+    "daily/2021-03-*": true,
+    "daily/2021-04-*": true,
+    "daily/2021-05-*": true,
+    "daily/2021-06-0*": true,
+    "daily/2021-06-1*": true,
+    "daily/2021-06-2*": true,
+    "daily/2021-07-01.md": true,
+    "daily/2021-07-02.md": true,
+    "daily/2021-07-03.md": true,
     ".vscode": true,
     // "Manifest.toml": true,
     // "Project.toml": true,
@@ -63,10 +74,6 @@
     "**/archive/**",
     "**/node_modules/*"
   ],
-  "todo-tree.filtering.includeGlobs": ["**/*.md"],
-  "todo-tree.filtering.includeHiddenFiles": false,
-  "todo-tree.tree.scanMode": "workspace",
-  "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
 
   "editor.renderLineHighlight": "none",
   "editor.matchBrackets": "never",
@@ -84,35 +91,11 @@
 
   "memo.decorations.enabled": true,
 
-  "todo-tree.general.enableFileWatcher": true,
-  "todo-tree.general.fileWatcherGlob": "**/*.md",
-  "todo-tree.tree.autoRefresh": true,
-
-  "todo-tree.regex.regex": "((\\*|//|#|<!--|;|/\\*|^)\\s*($TAGS):?\\s|^\\s*- \\[ \\])",
-  "todo-tree.general.tags": ["* [ ]", "+ [ ]", "- [ ]"],
-  "todo-tree.general.tagGroups": {
-    "TODO": ["- [ ]"],
-    "URGENT": ["+ [ ]"],
-    "QUESTION": ["* [ ]"]
-  },
-
   // icons: https://microsoft.github.io/vscode-codicons/dist/codicon.html
   "todo-tree.highlights.customHighlight": {
-    "URGENT": {
-      "icon": "flame",
-      "foreground": "#E44D26", // red
-      "fontWeight": "600",
-      "gutterIcon": true
-    },
     "TODO": {
       "icon": "chevron-right",
-      "foreground": "black",
-      "fontWeight": "600",
-      "gutterIcon": true
-    },
-    "QUESTION": {
-      "icon": "question",
-      "foreground": "#42A5F5", // readme blue
+      "foreground": "black", // black todos in notes!
       "fontWeight": "600",
       "gutterIcon": true
     }
@@ -121,16 +104,20 @@
   "editor.renderWhitespace": "none",
   "memo.backlinksPanel.enabled": true,
   "workbench.statusBar.visible": true,
-  "workbench.colorTheme": "Gray Matter Light",
+  "workbench.colorTheme": "Verdandi",
   "workbench.colorCustomizations": {
-    "workspaceInStatusBar.text": "#393939",
-    "tab.activeBackground": "#f5f5f5",
-    "editorGroupHeader.border": "#f5f5f5",
-    "tab.inactiveBackground": "#eaeaea",
-    "tab.border": "#eaeaea",
-    "editorGroupHeader.tabsBackground": "#eaeaea",
-    "editorGroupHeader.tabsBorder": "#eaeaea",
-    "tab.lastPinnedBorder": "#eaeaea",
+    "terminal.background": "#000", // to deal with annoying background bug
+
+    "editorCursor.background": "#fff",
+
+    // "workspaceInStatusBar.text": "#393939",
+    // "tab.activeBackground": "#f5f5f5",
+    // "editorGroupHeader.border": "#f5f5f5",
+    // "tab.inactiveBackground": "#eaeaea",
+    // "tab.border": "#eaeaea",
+    // "editorGroupHeader.tabsBackground": "#eaeaea",
+    // "editorGroupHeader.tabsBorder": "#eaeaea",
+    // "tab.lastPinnedBorder": "#eaeaea",
 
     "editorOverviewRuler.border": "#00000000",
     "sideBarSectionHeader.background": null,
@@ -171,12 +158,7 @@
 
   "cSpell.enableFiletypes": ["markdown", "!typescript", "!go"],
   "cSpell.allowCompoundWords": true,
-  "cSpell.words": [
-    "okrs",
-    "posix",
-    "roli",
-    "unprefixed"
-  ],
+  "cSpell.words": ["okrs", "posix", "roli", "unprefixed"],
   "cSpell.ignoreRegExpList": ["@[a-zA-Z0-9-]+", "\\[.*\\]", "`[^`]*`"],
   "cSpell.language": "en-GB,en"
 }
