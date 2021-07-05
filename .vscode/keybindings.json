@@ -1688,7 +1688,7 @@
   {
     "key": "cmd+\\",
     "command": "language-julia.debugEditorContents",
-    "when": "!inDebugMode"
+    "when": "!inDebugMode && editorLangId == 'julia'"
   },
   {
     "key": "ctrl+\\ ctrl+=",
