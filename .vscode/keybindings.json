@@ -899,7 +899,7 @@
     "command": "editor.debug.action.selectionToWatch"
   },
   {
-    "key": "ctrl+\\ ctrl+b",
+    "key": "ctrl+\\ ctrl+0",
     "command": "bookmarksExplorer.focus"
   },
   {
@@ -928,6 +928,11 @@
   {
     "key": "ctrl+cmd+[",
     "command": "workbench.files.action.collapseExplorerFolders"
+  },
+  {
+    "key": "ctrl+[",
+    "command": "workbench.files.action.collapseExplorerFolders",
+    "when": "filesExplorerFocus"
   },
   {
     "key": "ctrl+alt+cmd+]",
@@ -1686,7 +1691,19 @@
     "when": "!inDebugMode"
   },
   {
-    "key": "ctrl+\\ ctrl+cmd+-",
+    "key": "ctrl+\\ ctrl+=",
     "command": "memo.backlinksPanel.focus"
+  },
+  {
+    "key": "ctrl+w ctrl+w",
+    "command": "workbench.action.toggleEditorWidths"
+  },
+  {
+    "key": "cmd+k cmd+r",
+    "command": "recall.startRecall"
+  },
+  {
+    "key": "cmd+k shift+cmd+r",
+    "command": "recall.startFileReview"
   }
 ]

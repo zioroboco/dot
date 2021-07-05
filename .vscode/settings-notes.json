@@ -13,7 +13,7 @@
   // "zenMode.hideTabs": false,
   "zenMode.hideStatusBar": true,
   "zenMode.hideLineNumbers": true,
-  "editor.fontSize": 16,
+  // "editor.fontSize": 16,
 
   // "pasteImage.basePath": "${currentFileDir}/images",
   "memo.links.rules": [
@@ -39,6 +39,7 @@
   // "zenMode.hideTabs": false,
 
   "files.exclude": {
+    ".recall/": true,
     "Manifest.toml": true,
     "src/": true, // required by julia's package manager
     "archive": true,
@@ -55,7 +56,7 @@
     "daily/2021-07-01.md": true,
     "daily/2021-07-02.md": true,
     "daily/2021-07-03.md": true,
-    ".vscode": true,
+    // ".vscode": true,
     // "Manifest.toml": true,
     // "Project.toml": true,
     ".npmrc": true,
@@ -83,6 +84,7 @@
   "readTime.enabled": true,
 
   "[markdown]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "fcrespo82.markdown-table-formatter",
     "editor.tabSize": 2,
     "editor.wordWrapColumn": 80,

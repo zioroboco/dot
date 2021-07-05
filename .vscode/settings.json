@@ -1,4 +1,18 @@
 {
+  "editor.suggest.localityBonus": true,
+  // "editor.suggest.preview": true,
+  // "editor.suggest.filterGraceful": true,
+
+  "recall.hideBadges": [
+    "ARCHIVED",
+    "GOOD",
+    "HARD",
+    "FAIL",
+    "NEW",
+    "UPDATED",
+    "DUPLICATE"
+  ],
+
   "markdown-toc.updateOnSave": true,
   "markdown-toc.depthFrom": 2,
 
@@ -130,6 +144,9 @@
     // ".editor .editor-group-container .title-actions": "display: none !important" // works, but a bit extreme
 
     "#status\\.scm.statusbar-item.left:nth-of-type(4)": "display: none !important", // little swirly updaty thing
+
+    // hide the vscode-recall icon -- I'm genuinely amazed this works...
+    "#workbench\\.parts\\.editor > div.content > div.grid-view-container > div > div > div > div.monaco-scrollable-element.mac > div.split-view-container > div > div > div.title.show-file-icons.breadcrumbs > div.title-actions > div > div > ul > li:nth-child(2) > a": "display: none !important",
 
     // explorer top bar individual icons
     ".codicon-new-file": "display: none !important",
@@ -286,7 +303,7 @@
   // Universal path completions: {
   // "typescript.suggest.paths": false,
   "javascript.suggest.paths": false,
-  "path-autocomplete.ignoredFilesPattern": "**/{*.ts,*.tsx,settings.json,*.svelte,.editorconfig,*.jl,*.ipynb,*.rs}",
+  "path-autocomplete.ignoredFilesPattern": "**/{*.ts,*.tsx,settings.json,*.svelte,.editorconfig,*.jl,*.ipynb,*.rs,*.fountain}",
   "path-autocomplete.enableFolderTrailingSlash": false,
   "path-autocomplete.extensionOnImport": false,
   "path-autocomplete.triggerOutsideStrings": true,
@@ -561,6 +578,7 @@
 
   "breadcrumbs.symbolSortOrder": "position",
   // "breadcrumbs.symbolPath": "last", // fixes the <<RENDER ERROR>> bug
+  "breadcrumbs.symbolPath": "off",
 
   // "files.autoSave": "afterDelay",
   // "files.autoSaveDelay": 1000,
@@ -624,6 +642,8 @@
     "ADR.md": "document"
   },
   "material-icon-theme.folders.associations": {
+    "projects": "",
+    "posts": "",
     ".notes": "docs",
     "repl": "batch",
     "interactive": "batch",
