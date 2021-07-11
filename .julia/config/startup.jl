@@ -1,3 +1,5 @@
+using Revise
+
 using OhMyREPL
 OhMyREPL.input_prompt!("❱ ", :yellow)
 OhMyREPL.enable_pass!("RainbowBrackets", false)
