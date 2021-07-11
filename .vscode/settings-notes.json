@@ -1,4 +1,6 @@
 {
+  "gitlens.currentLine.enabled": false,
+  "breadcrumbs.symbolPath": "off",
   "editor.codeLens": false,
   // "go.enableCodeLens": {
   //   "references": false,
@@ -15,7 +17,6 @@
   "zenMode.hideLineNumbers": true,
   // "editor.fontSize": 16,
 
-  // "pasteImage.basePath": "${currentFileDir}/images",
   "memo.links.rules": [
     {
       "rule": "([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))\\.md$",
@@ -31,17 +32,15 @@
   "workbench.editor.showTabs": true,
   "breadcrumbs.enabled": true,
 
-  "pasteImage.path": "${currentFileDir}",
-
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 500,
   // "zenMode.hideLineNumbers": true,
   // "zenMode.hideTabs": false,
 
   "files.exclude": {
+    "**/.media/": true,
     ".recall/": true,
     "Manifest.toml": true,
-    "src/": true, // required by julia's package manager
     "archive": true,
     "people": false,
     "daily/2020-*": true,
@@ -56,7 +55,7 @@
     "daily/2021-07-01.md": true,
     "daily/2021-07-02.md": true,
     "daily/2021-07-03.md": true,
-    // ".vscode": true,
+    ".vscode": true,
     // "Manifest.toml": true,
     // "Project.toml": true,
     ".npmrc": true,
@@ -108,8 +107,6 @@
   "workbench.statusBar.visible": true,
   "workbench.colorTheme": "Verdandi",
   "workbench.colorCustomizations": {
-    "terminal.background": "#000", // to deal with annoying background bug
-
     "editorCursor.background": "#fff",
 
     // "workspaceInStatusBar.text": "#393939",

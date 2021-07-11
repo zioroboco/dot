@@ -851,7 +851,7 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "cmd+b cmd+m",
+    "key": "cmd+b cmd+p",
     "command": "bookmarks.listFromAllFiles"
   },
   {
@@ -1343,11 +1343,6 @@
     "when": "activeEditorIsPinned"
   },
   {
-    "key": "cmd+k cmd+l",
-    "command": "cSpell.addWordToUserDictionary"
-  },
-
-  {
     "key": "cmd+n cmd+u",
     "command": "workbench.action.files.newUntitledFile"
   },
@@ -1666,7 +1661,7 @@
     "command": "search.action.openNewEditor"
   },
   {
-    "key": "alt+cmd+[",
+    "key": "cmd+k cmd+j",
     "command": "editor.action.dirtydiff.previous",
     "when": "editorTextFocus"
   },
@@ -1705,5 +1700,65 @@
   {
     "key": "cmd+k shift+cmd+r",
     "command": "recall.startFileReview"
+  },
+  {
+    "key": "cmd+k cmd+l",
+    "command": "-editor.toggleFold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "alt+cmd+]",
+    "command": "gitlens.diffWithNext",
+    "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /tracked/"
+  },
+  {
+    "key": "alt+cmd+[",
+    "command": "gitlens.diffLineWithPrevious",
+    "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /tracked/"
+  },
+  {
+    "key": "shift+alt+,",
+    "command": "-gitlens.diffLineWithPrevious",
+    "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /tracked/"
+  },
+  {
+    "key": "shift+cmd+[",
+    "command": "-workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+cmd+]",
+    "command": "-workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+k cmd+l",
+    "command": "workbench.action.editor.nextChange",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+f5",
+    "command": "-workbench.action.editor.nextChange",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+k cmd+h",
+    "command": "workbench.action.editor.previousChange",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+f5",
+    "command": "-workbench.action.editor.previousChange",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+backspace",
+    "command": "-deleteAllLeft",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+k cmd+j",
+    "command": "-editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
   }
 ]

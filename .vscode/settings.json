@@ -1,4 +1,12 @@
 {
+  "terminal.integrated.gpuAcceleration": "auto", // fix dimmed terminal background (vscode #128295)
+  "terminal.integrated.tabs.enabled": false,
+  "vim.easymotionDimBackground": false,
+  "pasteImage.path": "${currentFileDir}/.media",
+  "editor.quickSuggestionsDelay": 200,
+  "editor.codeLens": false,
+
+  "files.trimTrailingWhitespace": true,
   "editor.suggest.localityBonus": true,
   // "editor.suggest.preview": true,
   // "editor.suggest.filterGraceful": true,
@@ -36,7 +44,7 @@
   ],
 
   "bookmarks.label.suggestion": "suggestWhenSelected",
-  "bookmarks.saveBookmarksInProject": true,
+  // "bookmarks.saveBookmarksInProject": true,
 
   "git-graph.graph.colours": [
     "#fb4934",
@@ -61,7 +69,6 @@
   "todo-tree.tree.tagsOnly": true,
   "julia.usePlotPane": true,
   "julia.usePlotNavigator": true,
-  // "editor.quickSuggestionsDelay": 400,
 
   "julia.completionmode": "qualify",
 
@@ -78,7 +85,8 @@
   "gitlens.hovers.pullRequests.enabled": false, // broken with SSO
 
   // "vim.easymotionKeys": "asdfghjklqwertyuiopzxcvbnm",
-  "vim.easymotionKeys": "qwertyuiopasdfghjklzxcvbnm",
+  // "vim.easymotionKeys": "qwertyuiopasdfghjklzxcvbnm1234567890",
+  "vim.easymotionKeys": "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890",
   "vim.foldfix": true,
 
   "julia.enableTelemetry": false,
@@ -141,12 +149,11 @@
     // ".viewlet .split-view-view.visible": "height: auto !important"
 
     // --- round 2
-    // ".editor .editor-group-container .title-actions": "display: none !important" // works, but a bit extreme
+    "#status\\.scm.statusbar-item.left:nth-of-type(5)": "display: none !important",
 
-    "#status\\.scm.statusbar-item.left:nth-of-type(4)": "display: none !important", // little swirly updaty thing
+    "a[title^='Recall:']": "display: none !important",
 
-    // hide the vscode-recall icon -- I'm genuinely amazed this works...
-    "#workbench\\.parts\\.editor > div.content > div.grid-view-container > div > div > div > div.monaco-scrollable-element.mac > div.split-view-container > div > div > div.title.show-file-icons.breadcrumbs > div.title-actions > div > div > ul > li:nth-child(2) > a": "display: none !important",
+    "h3.title[title^='GitHub Pull Request:']": "display: none !important",
 
     // explorer top bar individual icons
     ".codicon-new-file": "display: none !important",
@@ -286,7 +293,6 @@
   "debug.openDebug": "neverOpen",
   "debug.javascript.codelens.npmScripts": "never",
 
-  "editor.codeLens": true,
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
 
@@ -443,8 +449,9 @@
   "[markdown]": {
     "editor.wordWrapColumn": 80,
     "editor.wordWrap": "wordWrapColumn",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": false
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "fcrespo82.markdown-table-formatter",
+    "editor.formatOnSave": true
   },
   "[mdx]": {
     "editor.wordWrapColumn": 80,
@@ -471,7 +478,7 @@
   // "javascript.validate.enable": false,
   "bashIde.explainshellEndpoint": "http://localhost:5000",
 
-  "todo-tree.filtering.excludeGlobs": ["**/node_modules"],
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules/**/*"],
   "todo-tree.filtering.excludedWorkspaces": [
     "**/(dist|build|(*.)?out)/**/*",
     "**/node_modules/**/*"
@@ -578,7 +585,7 @@
 
   "breadcrumbs.symbolSortOrder": "position",
   // "breadcrumbs.symbolPath": "last", // fixes the <<RENDER ERROR>> bug
-  "breadcrumbs.symbolPath": "off",
+  // "breadcrumbs.symbolPath": "off",
 
   // "files.autoSave": "afterDelay",
   // "files.autoSaveDelay": 1000,
@@ -819,8 +826,7 @@
     // "terminal.background": "#181613", // terminal background
 
     "terminalCursor.background": "#191919",
-    // "terminal.background": "#191919", // original, replacing with black to deal with annoying background bug
-    "terminal.background": "#000",
+    "terminal.background": "#191919",
 
     // "editorIndentGuide.background": "#202020",
     "list.warningForeground": "#4d9e4d",
@@ -882,7 +888,6 @@
   "editor.suggestSelection": "first",
 
   "wallaby.startAutomatically": false,
-  "diffEditor.ignoreTrimWhitespace": false,
   "git.autofetch": true,
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
@@ -931,5 +936,5 @@
   "extensions.ignoreRecommendations": true,
   "workbench.colorTheme": "zeke",
   "security.workspace.trust.untrustedFiles": "open",
-  "extensions.autoUpdate": false
+  "diffEditor.ignoreTrimWhitespace": false
 }
