@@ -1,4 +1,16 @@
 {
+  "maptz.regionfolder": {
+    "[julia]": {
+      "foldStartRegex": "(?:@testset \"(.*)\")|(?:begin # (.*))",
+      "foldStart": "begin # [NAME]",
+      "foldEndRegex": "end;",
+      "foldEnd": "end;"
+    }
+  },
+
+  "gitlens.currentLine.enabled": false,
+  "editor.renderIndentGuides": false,
+
   "terminal.integrated.gpuAcceleration": "auto", // fix dimmed terminal background (vscode #128295)
   "terminal.integrated.tabs.enabled": false,
   "vim.easymotionDimBackground": false,
@@ -29,8 +41,8 @@
   "insertDateString.format": "[[YYYY-MM-DD]]",
   // "insertDateString.formatDate": "\n---\n## [[YYYY-MM-DD]]",
   // "insertDateString.formatTime": "\n---\n## `HH:mmA`\n",
-  "insertDateString.formatDate": "## [[YYYY-MM-DD]]\n",
-  "insertDateString.formatTime": "## `HH:mmA`\n",
+  "insertDateString.formatDate": "---\n## [[YYYY-MM-DD]]:",
+  "insertDateString.formatTime": "---\n## `HH:mmA`:",
 
   "memo.links.rules": [
     {
@@ -101,7 +113,7 @@
   // "julia.persistentSession.enabled": true,
   // "julia.format.ops": false,
 
-  "julia.persistentSession.tmuxSessionName": "julia-repl",
+  // "julia.persistentSession.tmuxSessionName": "julia-repl",
 
   "julia.lint.run": true,
   "julia.format.indent": 2,
@@ -109,7 +121,7 @@
 
   "markdown.extension.toc.levels": "2..6",
 
-  "julia.additionalArgs": ["--startup-file=no"],
+  // "julia.additionalArgs": ["--startup-file=no"],
   "terminal.integrated.cursorStyle": "underline",
   "terminal.integrated.rendererType": "experimentalWebgl",
 
@@ -755,23 +767,23 @@
   "workbench.settings.openDefaultSettings": false,
   "workbench.settings.editor": "json",
 
-  "editor.fontFamily": "JetBrains Mono,Fira Code",
+  // "editor.fontFamily": "JetBrains Mono,Fira Code",
+  "editor.fontFamily": "JetBrains Mono,JuliaMono",
 
   "[julia]": {
-    "editor.fontFamily": "JetBrains Mono,JuliaMono",
+    // "editor.fontFamily": "JetBrains Mono,JuliaMono",
     // "editor.fontFamily": "JuliaMono",
     "editor.formatOnSave": false,
-    "editor.insertSpaces": true,
+    "editor.insertSpaces": false,
     "editor.tabSize": 2,
     // "editor.defaultFormatter": "julialang.language-julia"
-    "editor.defaultFormatter": "singularitti.vscode-julia-formatter"
+    "editor.defaultFormatter": "julialang.language-julia-insider"
   },
 
   "juliaFormatter.indent": 2,
 
   "editor.fontSize": 14,
   "editor.fontWeight": "500",
-  "editor.renderIndentGuides": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "workbench.sideBar.location": "right",
@@ -872,7 +884,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "diffEditor.renderSideBySide": true,
+  "diffEditor.renderSideBySide": false,
   "liveshare.featureSet": "insiders",
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
@@ -936,5 +948,16 @@
   "extensions.ignoreRecommendations": true,
   "workbench.colorTheme": "zeke",
   "security.workspace.trust.untrustedFiles": "open",
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  "codesnap.shutterAction": "copy",
+  "codesnap.containerPadding": "0.5em",
+  "codesnap.boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px",
+  "codesnap.transparentBackground": true,
+  "codesnap.showWindowControls": false,
+  "codesnap.showWindowTitle": false,
+  "codesnap.showLineNumbers": false,
+  "codesnap.realLineNumbers": false,
+  "window.zoomLevel": 1,
+  "extensions.autoUpdate": false
 }

@@ -678,10 +678,6 @@
     "when": "inSearchEditor"
   },
   {
-    "key": "cmd+k cmd+s",
-    "command": "conflictSqueezer.squeezeConflicts"
-  },
-  {
     "key": "cmd+r cmd+b",
     "command": "gitlens.toggleLineBlame"
   },
@@ -851,7 +847,7 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "cmd+b cmd+p",
+    "key": "cmd+b cmd+l",
     "command": "bookmarks.listFromAllFiles"
   },
   {
@@ -933,14 +929,6 @@
     "key": "ctrl+[",
     "command": "workbench.files.action.collapseExplorerFolders",
     "when": "filesExplorerFocus"
-  },
-  {
-    "key": "ctrl+alt+cmd+]",
-    "command": "editor.action.smartSelect.expand"
-  },
-  {
-    "key": "ctrl+alt+cmd+[",
-    "command": "editor.action.smartSelect.shrink"
   },
   {
     "key": "cmd+k cmd+r",
@@ -1058,19 +1046,41 @@
   },
   {
     "key": "alt+down",
-    "command": "spaceBlockJumper.moveDown"
+    "command": "cursorMove",
+    "when": "editorTextFocus",
+    "args": {
+      "to": "nextBlankLine",
+      "by": "wrappedLine"
+    }
   },
   {
     "key": "alt+up",
-    "command": "spaceBlockJumper.moveUp"
+    "command": "cursorMove",
+    "when": "editorTextFocus",
+    "args": {
+      "to": "prevBlankLine",
+      "by": "wrappedLine"
+    }
   },
   {
     "key": "shift+alt+down",
-    "command": "spaceBlockJumper.selectDown"
+    "command": "cursorMove",
+    "when": "editorTextFocus",
+    "args": {
+      "to": "nextBlankLine",
+      "by": "wrappedLine",
+      "select": true
+    }
   },
   {
     "key": "shift+alt+up",
-    "command": "spaceBlockJumper.selectUp"
+    "command": "cursorMove",
+    "when": "editorTextFocus",
+    "args": {
+      "to": "prevBlankLine",
+      "by": "wrappedLine",
+      "select": true
+    }
   },
   {
     "key": "shift+cmd+\\",
@@ -1470,12 +1480,24 @@
     "when": "editorTextFocus && selectionAnchorSet"
   },
   {
-    "key": "ctrl+shift+[",
-    "command": "editor.foldAll"
+    "key": "ctrl+cmd+[",
+    "command": "editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "key": "ctrl+shift+]",
-    "command": "editor.unfoldAll"
+    "key": "ctrl+cmd+]",
+    "command": "editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+cmd+alt+[",
+    "command": "editor.foldAllExcept",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+cmd+alt+]",
+    "command": "editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
   },
   {
     "key": "ctrl+[",
@@ -1760,5 +1782,13 @@
     "key": "cmd+k cmd+j",
     "command": "-editor.unfoldAll",
     "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "cmd+k cmd+backspace",
+    "command": "git.revertChange"
+  },
+  {
+    "key": "cmd+k cmd+s",
+    "command": "git.stageAll"
   }
 ]

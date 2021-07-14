@@ -1,4 +1,5 @@
 {
+  "editor.lineNumbers": "off",
   "gitlens.currentLine.enabled": false,
   "breadcrumbs.symbolPath": "off",
   "editor.codeLens": false,
