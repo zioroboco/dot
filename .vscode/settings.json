@@ -1,10 +1,10 @@
 {
   "maptz.regionfolder": {
     "[julia]": {
-      "foldStartRegex": "(?:@testset \"(.*)\")|(?:begin # (.*))",
-      "foldStart": "begin # [NAME]",
-      "foldEndRegex": "end;",
-      "foldEnd": "end;"
+      "foldStartRegex": "(?:module (.*))|(?:@testset \"(.*)\")|(?:begin #(.*))",
+      "foldStart": "begin #[NAME]",
+      "foldEndRegex": "end(;)|( #)",
+      "foldEnd": "end #"
     }
   },
 
