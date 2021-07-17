@@ -88,6 +88,7 @@ hash -d lab="/Users/louis/Dropbox/Apps/Editorial/lab"
 hash -d ops="/Users/louis/cultureamp/frontend-ops"
 hash -d base-infra="/Users/louis/cultureamp/base-infrastructure-for-services"
 hash -d kaizen="/Users/louis/cultureamp/kaizen-design-system"
+hash -d orrery="/Users/louis/zioroboco/Orrery.jl"
 
 killon() {
   kill -9 $(lsof -t -i :$1)

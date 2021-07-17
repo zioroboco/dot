@@ -2,7 +2,7 @@
 
 tmux="/usr/local/bin/tmux"
 project_dir=$(project-root "$1")
-session=$(basename "$project_dir")
+session=$(basename "$project_dir" | tr '.' '_') # tmux doesn't support '.' in session names
 
 if [[ $(basename "$(pwd)") = "notes" ]]; then
 	session="notes"
