@@ -466,10 +466,6 @@
     "when": "!inDebugMode"
   },
   {
-    "key": "shift+tab",
-    "command": "editor.action.outdentLines"
-  },
-  {
     "key": "shift+cmd+v",
     "command": "-markdown.showPreview",
     "when": "editorLangId == 'markdown'"
@@ -1485,17 +1481,17 @@
     "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "key": "ctrl+cmd+]",
+    "key": "ctrl+cmd+alt+]",
     "command": "editor.unfoldAll",
     "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "key": "ctrl+cmd+alt+[",
+    "key": "ctrl+alt+cmd+[",
     "command": "editor.foldAllExcept",
     "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "key": "ctrl+cmd+alt+]",
+    "key": "ctrl+cmd+]",
     "command": "editor.unfoldAll",
     "when": "editorTextFocus && foldingEnabled"
   },
@@ -1599,18 +1595,8 @@
     "command": "insertDateString.insertTime"
   },
   {
-    "key": "shift+up",
-    "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
     "key": "alt+up",
     "command": "-editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+down",
-    "command": "editor.action.moveLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
@@ -1649,7 +1635,12 @@
   {
     "key": "tab",
     "command": "editor.action.indentLines",
-    "when": "editorTextFocus && !editorReadonly && vim.mode != 'CommandlineInProgress'"
+    "when": "editorTextFocus && !editorReadonly && vim.mode != 'CommandLineInProgress' && vim.mode != 'Insert'"
+  },
+  {
+    "key": "shift+tab",
+    "command": "editor.action.outdentLines",
+    "when": "editorTextFocus && !editorReadonly && vim.mode != 'CommandLineInProgress' && vim.mode != 'Insert'"
   },
   {
     "key": "cmd+]",
@@ -1790,5 +1781,40 @@
   {
     "key": "cmd+k cmd+s",
     "command": "git.stageAll"
+  },
+  {
+    "key": "shift+up",
+    "command": "scrollLineUp",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+pageup",
+    "command": "-scrollLineUp",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+down",
+    "command": "scrollLineDown",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+pagedown",
+    "command": "-scrollLineDown",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+k cmd+c",
+    "command": "-editor.action.addCommentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+\\",
+    "command": "editor.action.inlineSuggest.trigger",
+    "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+  },
+  {
+    "key": "alt+\\",
+    "command": "-editor.action.inlineSuggest.trigger",
+    "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
   }
 ]

@@ -1,12 +1,18 @@
 {
-  "maptz.regionfolder": {
-    "[julia]": {
-      "foldStartRegex": "(?:module (.*))|(?:@testset \"(.*)\")|(?:begin #(.*))",
-      "foldStart": "begin #[NAME]",
-      "foldEndRegex": "end(;)|( #)",
-      "foldEnd": "end #"
-    }
+  "github.copilot.advanced": {
+    "debug.showScores": true
   },
+  "editor.tabCompletion": "on",
+  "emmet.triggerExpansionOnTab": false,
+
+  // "maptz.regionfolder": {
+  //   "[julia]": {
+  //     "foldStartRegex": "(?:@testset \"(.*)\")|(?:begin #(.*))",
+  //     "foldStart": "begin #[NAME]",
+  //     "foldEndRegex": "end;? #.*",
+  //     "foldEnd": "end #"
+  //   }
+  // },
 
   "gitlens.currentLine.enabled": false,
   "editor.renderIndentGuides": false,
@@ -82,8 +88,6 @@
   "julia.usePlotPane": true,
   "julia.usePlotNavigator": true,
 
-  "julia.completionmode": "qualify",
-
   "[go]": { "editor.tabSize": 2 },
   "rust-analyzer.diagnostics.disabled": ["macro-error"],
 
@@ -101,8 +105,6 @@
   "vim.easymotionKeys": "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890",
   "vim.foldfix": true,
 
-  "julia.enableTelemetry": false,
-  "julia.enableCrashReporter": false,
   "julia.lint.call": false,
 
   // "julia.executablePath": "/usr/local/bin/julia",
@@ -321,7 +323,7 @@
   // Universal path completions: {
   // "typescript.suggest.paths": false,
   "javascript.suggest.paths": false,
-  "path-autocomplete.ignoredFilesPattern": "**/{*.ts,*.tsx,settings.json,*.svelte,.editorconfig,*.jl,*.ipynb,*.rs,*.fountain}",
+  "path-autocomplete.ignoredFilesPattern": "**/{*.ts,*.tsx,settings.json,*.svelte,.editorconfig,*.jl,*.ipynb,*.rs,*.fountain,*.go,*.js}",
   "path-autocomplete.enableFolderTrailingSlash": false,
   "path-autocomplete.extensionOnImport": false,
   "path-autocomplete.triggerOutsideStrings": true,
@@ -665,6 +667,7 @@
     "posts": "",
     ".notes": "docs",
     "repl": "batch",
+    "dev": "batch",
     "interactive": "batch",
     "main": "server",
     "cdk.out": "dist",
@@ -775,9 +778,9 @@
     // "editor.fontFamily": "JuliaMono",
     "editor.formatOnSave": false,
     "editor.insertSpaces": false,
-    "editor.tabSize": 2,
+    "editor.tabSize": 2
     // "editor.defaultFormatter": "julialang.language-julia"
-    "editor.defaultFormatter": "julialang.language-julia-insider"
+    // "editor.defaultFormatter": "julialang.language-julia-insider"
   },
 
   "juliaFormatter.indent": 2,
@@ -878,7 +881,8 @@
     "CODEOWNERS": "ignore",
     ".prettierrc": "yaml",
     "todo": "todo",
-    "*.svx": "markdown"
+    "*.svx": "markdown",
+    "*.jl": "julia"
   },
   "breadcrumbs.enabled": true,
   "[javascript]": {
@@ -958,6 +962,12 @@
   "codesnap.showWindowTitle": false,
   "codesnap.showLineNumbers": false,
   "codesnap.realLineNumbers": false,
-  "window.zoomLevel": 1,
-  "extensions.autoUpdate": false
+  "julia.enableTelemetry": true,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": true
+  }
 }
